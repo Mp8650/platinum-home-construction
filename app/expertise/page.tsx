@@ -120,7 +120,7 @@ export default function ExpertisePage() {
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&h=900&fit=crop')",
+          backgroundImage: "url('/images/experties.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.15

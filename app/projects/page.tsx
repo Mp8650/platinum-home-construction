@@ -11,7 +11,7 @@ const projects = [
     location: "Toronto, ON",
     category: "Residential",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    image: "/images/modernresidentialtower.png",
     description:
       "Luxury residential tower with modern architecture, sustainable design, and smart home features.",
     valueTags: ["Quality First", "Safety Focused", "Long-Term Durability"],
@@ -22,7 +22,7 @@ const projects = [
     location: "Vancouver, BC",
     category: "Commercial",
     year: "2023",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+    image: "/images/commercialofficehub.png",
     description:
       "High-rise office complex designed for efficiency, compliance, and modern workplace standards.",
     valueTags: ["On-Time Delivery", "Smart Planning", "Premium Finishes"],
@@ -33,7 +33,7 @@ const projects = [
     location: "Calgary, AB",
     category: "Institutional",
     year: "2022",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
+    image: "/images/healthcare.png",
     description:
       "State-of-the-art healthcare facility focused on patient comfort and operational excellence.",
     valueTags: ["Compliance Ready", "Safety First", "Operational Efficiency"],
@@ -44,7 +44,7 @@ const projects = [
     location: "Whistler, BC",
     category: "Renovation",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+    image: "/images/luxurycottage.png",
     description:
       "Premium renovation blending modern design with natural materials and eco-conscious systems.",
     valueTags: ["Attention to Detail", "Craftsmanship", "Eco-Friendly"],
@@ -55,7 +55,7 @@ const projects = [
     location: "Montreal, QC",
     category: "Residential",
     year: "2023",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+    image: "/images/downtowncondo.png",
     description:
       "Urban living spaces with premium interiors and energy-efficient construction.",
     valueTags: ["Urban Expertise", "Premium Build", "Energy Efficient"],
@@ -66,7 +66,7 @@ const projects = [
     location: "Edmonton, AB",
     category: "Commercial",
     year: "2023",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop",
+    image: "/images/industrial.png",
     description:
       "Modern warehouse facility with advanced logistics infrastructure.",
     valueTags: ["Smart Execution", "Structural Strength", "Future Ready"],
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&h=900&fit=crop')",
+              "url('/images/projectsbanner.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
