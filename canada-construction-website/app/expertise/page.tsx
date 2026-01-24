@@ -1,0 +1,311 @@
+import { 
+  Building, Home, Hammer, Leaf, ShieldCheck, MapPin, 
+  Award, Wrench, Users, TrendingUp, CheckCircle, ArrowRight 
+} from "lucide-react";
+import React from "react";
+
+// ------------------------
+// Type Definitions
+// ------------------------
+type ColorKey = "blue" | "green" | "orange" | "emerald" | "indigo" | "slate";
+
+interface ExpertiseArea {
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+  color: ColorKey;
+  tags: string[];
+  stats: { label: string; value: string };
+}
+
+interface Capability {
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+}
+
+// ------------------------
+// Data
+// ------------------------
+const expertiseAreas: ExpertiseArea[] = [
+  {
+    icon: Building,
+    title: "Commercial Construction",
+    description: "Offices, retail spaces, and industrial buildings designed and built with strict quality standards and regulatory compliance.",
+    color: "blue",
+    tags: ["Design-Build", "Execution", "Delivery"],
+    stats: { label: "Projects", value: "150+" }
+  },
+  {
+    icon: Home,
+    title: "Residential Projects",
+    description: "Modern homes, luxury estates, and multi-family developments with a focus on comfort, functionality, and sustainability.",
+    color: "green",
+    tags: ["Luxury Living", "Modern Design", "Premium Quality"],
+    stats: { label: "Homes Built", value: "500+" }
+  },
+  {
+    icon: Hammer,
+    title: "Renovation & Retrofit",
+    description: "Complete renovations and retrofits for improved performance, enhanced safety standards, and modern aesthetics.",
+    color: "orange",
+    tags: ["Upgrades", "Modernization", "Value-Add"],
+    stats: { label: "Renovations", value: "300+" }
+  },
+  {
+    icon: Leaf,
+    title: "Sustainable Construction",
+    description: "Eco-friendly building practices using low-carbon materials, renewable energy systems, and green building certifications.",
+    color: "emerald",
+    tags: ["LEED Certified", "Net-Zero", "Eco-Friendly"],
+    stats: { label: "Green Projects", value: "75+" }
+  },
+  {
+    icon: ShieldCheck,
+    title: "Safety & Compliance",
+    description: "Industry-leading safety protocols and complete regulatory compliance across all project phases and construction sites.",
+    color: "indigo",
+    tags: ["OH&S Standards", "Compliance", "Zero Incidents"],
+    stats: { label: "Safety Rating", value: "98%" }
+  },
+  {
+    icon: MapPin,
+    title: "Project Management",
+    description: "End-to-end project planning, scheduling, budget control, and stakeholder management for on-time, on-budget delivery.",
+    color: "slate",
+    tags: ["Planning", "Coordination", "Delivery"],
+    stats: { label: "On-Time Rate", value: "96%" }
+  }
+];
+
+const capabilities: Capability[] = [
+  {
+    icon: Award,
+    title: "Industry Recognition",
+    description: "Award-winning construction excellence across Canada"
+  },
+  {
+    icon: Users,
+    title: "Expert Team",
+    description: "Certified professionals with 15+ years average experience"
+  },
+  {
+    icon: TrendingUp,
+    title: "Proven Track Record",
+    description: "$500M+ in successfully completed projects"
+  },
+  {
+    icon: Wrench,
+    title: "Advanced Technology",
+    description: "BIM, drone surveying, and project management software"
+  }
+];
+
+const colorVariants: Record<ColorKey, { icon: string; badge: string; hover: string }> = {
+  blue: { icon: "text-blue-600", badge: "bg-blue-50 text-blue-700", hover: "group-hover:bg-blue-50" },
+  green: { icon: "text-green-600", badge: "bg-green-50 text-green-700", hover: "group-hover:bg-green-50" },
+  orange: { icon: "text-orange-600", badge: "bg-orange-50 text-orange-700", hover: "group-hover:bg-orange-50" },
+  emerald: { icon: "text-emerald-600", badge: "bg-emerald-50 text-emerald-700", hover: "group-hover:bg-emerald-50" },
+  indigo: { icon: "text-indigo-600", badge: "bg-indigo-50 text-indigo-700", hover: "group-hover:bg-indigo-50" },
+  slate: { icon: "text-slate-600", badge: "bg-slate-50 text-slate-700", hover: "group-hover:bg-slate-50" }
+};
+
+// ------------------------
+// Component
+// ------------------------
+export default function ExpertisePage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&h=900&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.15
+        }}></div>
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <div className="inline-block mb-4 px-4 py-2 bg-orange-600 bg-opacity-20 rounded-full border border-orange-400 border-opacity-30">
+            <span className="text-orange-300 font-semibold text-sm">OUR CAPABILITIES</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Expertise in <span className="text-orange-400">Construction Excellence</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Delivering premium construction solutions across Canada with precision, safety, and innovation at every stage
+          </p>
+        </div>
+      </section>
+
+      {/* Quick Stats */}
+      <section className="max-w-7xl mx-auto px-6 -mt-12 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {capabilities.map((cap, idx) => {
+            const Icon = cap.icon;
+            return (
+              <div key={idx} className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 text-center">
+                <Icon className="w-10 h-10 text-orange-600 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-1">{cap.title}</h3>
+                <p className="text-sm text-gray-600">{cap.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Expertise Areas */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Excel At</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Six core areas of expertise that define our construction leadership across Canada
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {expertiseAreas.map((area, idx) => {
+            const Icon = area.icon;
+            const colors = colorVariants[area.color];
+
+            return (
+              <div key={idx} className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1">
+                <div className={`p-8 ${colors.hover} transition-colors duration-300`}>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-xl ${colors.badge}`}>
+                      <Icon className={`w-8 h-8 ${colors.icon}`} />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-gray-900">{area.stats.value}</div>
+                      <div className="text-xs text-gray-500 font-medium">{area.stats.label}</div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{area.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">{area.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {area.tags.map((tag, tagIdx) => (
+                      <span key={tagIdx} className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Construction Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A proven methodology that ensures quality, efficiency, and client satisfaction
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-5 gap-6">
+            {[
+  {
+    step: "01",
+    title: "Discovery",
+    description: "Initial consultation and site assessment",
+    bg: "bg-slate-100",
+    text: "text-slate-800",
+  },
+  {
+    step: "02",
+    title: "Design",
+    description: "Architectural planning and engineering",
+    bg: "bg-indigo-100",
+    text: "text-indigo-800",
+  },
+  {
+    step: "03",
+    title: "Planning",
+    description: "Permits, scheduling, and budgeting",
+    bg: "bg-amber-100",
+    text: "text-amber-800",
+  },
+  {
+    step: "04",
+    title: "Construction",
+    description: "Expert execution with quality control",
+    bg: "bg-orange-100",
+    text: "text-orange-800",
+  },
+  {
+    step: "05",
+    title: "Completion",
+    description: "Final inspection and handover",
+    bg: "bg-emerald-100",
+    text: "text-emerald-800",
+  },
+].map((phase, idx) => (
+              <div key={idx} className="relative">
+                <div className={`${phase.bg} ${phase.text} text-sm rounded-2xl p-6 shadow-lg`}>
+                  <div className="text-5xl font-bold opacity-30 mb-2">{phase.step}</div>
+                  <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
+                  <p className={`${phase.text} text-sm`}>{phase.description}</p>
+                </div>
+                {idx < 4 && (
+                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-orange-300 z-10"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-12 md:p-16 text-white overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-12 text-center">Why Choose Platinum Home Services</h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { title: "Canadian Expertise", desc: "Deep understanding of Canadian building codes, climate considerations, and regional requirements" },
+                { title: "Quality Assurance", desc: "Rigorous quality control at every phase with third-party inspections and certifications" },
+                { title: "Client-Focused", desc: "Transparent communication, flexible solutions, and commitment to exceeding expectations" },
+                { title: "Innovation", desc: "Latest construction technologies, sustainable practices, and cutting-edge methodologies" },
+                { title: "Safety First", desc: "Zero-compromise safety culture with ongoing training and certified safety officers" },
+                { title: "On-Time Delivery", desc: "96% on-time completion rate through meticulous planning and project management" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <p className="text-gray-300">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <p className="text-xl text-orange-100 mb-10 max-w-2xl mx-auto">
+            Talk to our construction experts and get a free consultation with detailed project assessment
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105">
+              Get Free Consultation
+            </button>
+            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all">
+              View Our Projects
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
