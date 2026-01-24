@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from 'next/link';
+import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft, MapPin, Calendar, Tag, Users, CheckCircle, Clock, DollarSign, Share2, Download, ChevronLeft, ChevronRight } from "lucide-react";
 
 // This would come from your database/API or route params in real Next.js app
@@ -292,9 +293,9 @@ const allProjects = {
 export default function ProjectDetailsPage({ projectId = 1 }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState(projectId);
-  
+  const router = useRouter();
+  const pathname = usePathname();
   const projectData = allProjects[selectedProject as keyof typeof allProjects];
-
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % projectData.images.length);
@@ -302,6 +303,15 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + projectData.images.length) % projectData.images.length);
+  };
+
+
+  const handleNav = (href: string) => {
+    if (pathname === href) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push(href);
+    }
   };
 
   return (
@@ -537,309 +547,17 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
             Let's discuss how we can bring your vision to life with the same level of excellence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-all shadow-xl">
+            <button 
+            onClick={() => handleNav("/contact")}
+            className="px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-all shadow-xl">
               Start Your Project
             </button>
-            <button className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl">
+            {/* <button className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl">
               View More Projects
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// "use client";
-// import { useState } from "react";
-// import Link from 'next/link';
-// import { ArrowLeft, MapPin, Calendar, Tag, Users, CheckCircle, Clock, DollarSign, Share2, Download, ChevronLeft, ChevronRight } from "lucide-react";
-
-// const projectData = {
-//   id: 1,
-//   title: "Modern Residential Tower",
-//   location: "Toronto, ON",
-//   category: "Residential",
-//   year: "2024",
-//   client: "Skyline Developments Inc.",
-//   duration: "18 months",
-//   budget: "$45M CAD",
-//   size: "250,000 sq ft",
-//   status: "Completed",
-//   description: "A landmark luxury residential tower featuring 200 premium units with modern architecture, sustainable design principles, and cutting-edge smart home technology. This project sets a new standard for urban living in downtown Toronto.",
-//   images: [
-//     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=800&fit=crop",
-//     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop",
-//     "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop",
-//     "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop"
-//   ],
-//   highlights: [
-//     "LEED Gold Certified sustainable construction",
-//     "200 luxury residential units with premium finishes",
-//     "Rooftop amenity space with city views",
-//     "Underground parking for 250 vehicles",
-//     "Smart building automation systems",
-//     "Energy-efficient HVAC and insulation"
-//   ],
-//   challenges: [
-//     {
-//       title: "Urban Site Constraints",
-//       solution: "Implemented advanced logistics planning and off-site prefabrication to minimize disruption to the busy downtown area."
-//     },
-//     {
-//       title: "Sustainability Goals",
-//       solution: "Integrated high-performance building envelope, solar panels, and rainwater harvesting systems to achieve LEED Gold certification."
-//     },
-//     {
-//       title: "Timeline Pressure",
-//       solution: "Utilized BIM technology and lean construction methods to optimize scheduling and maintain the aggressive 18-month timeline."
-//     }
-//   ],
-//   team: [
-//     { role: "Project Manager", name: "Sarah Johnson" },
-//     { role: "Lead Architect", name: "Michael Chen" },
-//     { role: "Site Supervisor", name: "David Robertson" },
-//     { role: "Safety Officer", name: "Emma Williams" }
-//   ]
-// };
-
-// export default function ProjectDetailsPage() {
-//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-//   const nextImage = () => {
-//     setCurrentImageIndex((prev) => (prev + 1) % projectData.images.length);
-//   };
-
-//   const prevImage = () => {
-//     setCurrentImageIndex((prev) => (prev - 1 + projectData.images.length) % projectData.images.length);
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-gray-50">
-//       {/* Navigation Bar */}
-//       <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
-//         <div className="max-w-7xl mx-auto px-6 py-4">
-//           <Link
-//             href="/projects"
-//             className="flex items-center gap-2 text-gray-600 hover:text-orange-600 font-semibold"
-//           >
-//             <ArrowLeft className="w-5 h-5" />
-//             Back to Projects
-//           </Link>
-//         </div>
-//       </div>
-
-//       {/* Hero Image Gallery */}
-//       <section className="relative bg-black">
-//         <div className="relative h-96 md:h-[600px]">
-//           <img
-//             src={projectData.images[currentImageIndex]}
-//             alt={projectData.title}
-//             className="w-full h-full object-cover"
-//           />
-//           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          
-//           {/* Navigation Arrows */}
-//           <button
-//             onClick={prevImage}
-//             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-lg transition-all"
-//           >
-//             <ChevronLeft className="w-6 h-6 text-gray-800" />
-//           </button>
-//           <button
-//             onClick={nextImage}
-//             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-lg transition-all"
-//           >
-//             <ChevronRight className="w-6 h-6 text-gray-800" />
-//           </button>
-
-//           {/* Image Counter */}
-//           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black bg-opacity-70 px-4 py-2 rounded-full">
-//             <span className="text-white font-semibold">
-//               {currentImageIndex + 1} / {projectData.images.length}
-//             </span>
-//           </div>
-
-//           {/* Title Overlay */}
-//           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-//             <div className="max-w-7xl mx-auto">
-//               <div className="inline-block mb-3 px-4 py-1.5 bg-orange-600 rounded-full">
-//                 <span className="text-white font-bold text-sm">{projectData.status}</span>
-//               </div>
-//               <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
-//                 {projectData.title}
-//               </h1>
-//               <div className="flex items-center gap-2 text-white text-lg">
-//                 <MapPin className="w-5 h-5 text-orange-400" />
-//                 <span>{projectData.location}</span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Thumbnail Gallery */}
-//         <div className="bg-gray-900 py-4">
-//           <div className="max-w-7xl mx-auto px-6">
-//             <div className="flex gap-3 overflow-x-auto">
-//               {projectData.images.map((img, idx) => (
-//                 <button
-//                   key={idx}
-//                   onClick={() => setCurrentImageIndex(idx)}
-//                   className={`flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-//                     currentImageIndex === idx ? 'border-orange-500 scale-105' : 'border-transparent opacity-60 hover:opacity-100'
-//                   }`}
-//                 >
-//                   <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Project Info Cards */}
-//       <section className="max-w-7xl mx-auto px-6 py-12">
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-//           <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-//             <Tag className="w-8 h-8 text-orange-600 mb-3" />
-//             <p className="text-gray-500 text-sm font-medium mb-1">Category</p>
-//             <p className="text-xl font-bold text-gray-900">{projectData.category}</p>
-//           </div>
-//           <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-//             <Calendar className="w-8 h-8 text-orange-600 mb-3" />
-//             <p className="text-gray-500 text-sm font-medium mb-1">Completed</p>
-//             <p className="text-xl font-bold text-gray-900">{projectData.year}</p>
-//           </div>
-//           <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-//             <Clock className="w-8 h-8 text-orange-600 mb-3" />
-//             <p className="text-gray-500 text-sm font-medium mb-1">Duration</p>
-//             <p className="text-xl font-bold text-gray-900">{projectData.duration}</p>
-//           </div>
-//           <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-//             <DollarSign className="w-8 h-8 text-orange-600 mb-3" />
-//             <p className="text-gray-500 text-sm font-medium mb-1">Budget</p>
-//             <p className="text-xl font-bold text-gray-900">{projectData.budget}</p>
-//           </div>
-//         </div>
-
-//         <div className="grid md:grid-cols-3 gap-8">
-//           {/* Main Content */}
-//           <div className="md:col-span-2 space-y-8">
-//             {/* Overview */}
-//             <div className="bg-white rounded-2xl p-8 shadow-md">
-//               <h2 className="text-3xl font-bold text-gray-900 mb-4">Project Overview</h2>
-//               <p className="text-gray-700 leading-relaxed text-lg">{projectData.description}</p>
-//             </div>
-
-//             {/* Key Highlights */}
-//             <div className="bg-white rounded-2xl p-8 shadow-md">
-//               <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Highlights</h2>
-//               <div className="grid md:grid-cols-2 gap-4">
-//                 {projectData.highlights.map((highlight, idx) => (
-//                   <div key={idx} className="flex items-start gap-3">
-//                     <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-//                     <span className="text-gray-700 font-medium">{highlight}</span>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Challenges & Solutions */}
-//             <div className="bg-white rounded-2xl p-8 shadow-md">
-//               <h2 className="text-3xl font-bold text-gray-900 mb-6">Challenges & Solutions</h2>
-//               <div className="space-y-6">
-//                 {projectData.challenges.map((item, idx) => (
-//                   <div key={idx} className="border-l-4 border-orange-600 pl-6 py-2">
-//                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-//                     <p className="text-gray-700 leading-relaxed">{item.solution}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Sidebar */}
-//           <div className="space-y-6">
-//             {/* Client Info */}
-//             <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl p-6 text-white shadow-lg">
-//               <h3 className="text-xl font-bold mb-4">Project Details</h3>
-//               <div className="space-y-3">
-//                 <div>
-//                   <p className="text-orange-100 text-sm mb-1">Client</p>
-//                   <p className="font-semibold">{projectData.client}</p>
-//                 </div>
-//                 <div>
-//                   <p className="text-orange-100 text-sm mb-1">Project Size</p>
-//                   <p className="font-semibold">{projectData.size}</p>
-//                 </div>
-//                 <div>
-//                   <p className="text-orange-100 text-sm mb-1">Location</p>
-//                   <p className="font-semibold">{projectData.location}</p>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Project Team */}
-//             <div className="bg-white rounded-2xl p-6 shadow-md">
-//               <div className="flex items-center gap-2 mb-4">
-//                 <Users className="w-6 h-6 text-orange-600" />
-//                 <h3 className="text-xl font-bold text-gray-900">Project Team</h3>
-//               </div>
-//               <div className="space-y-3">
-//                 {projectData.team.map((member, idx) => (
-//                   <div key={idx} className="border-b border-gray-100 pb-3 last:border-0 last:pb-0">
-//                     <p className="text-sm text-gray-500">{member.role}</p>
-//                     <p className="font-semibold text-gray-900">{member.name}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-
-//             {/* Actions */}
-//             <div className="bg-white rounded-2xl p-6 shadow-md space-y-3">
-//               <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-all">
-//                 <Share2 className="w-5 h-5" />
-//                 Share Project
-//               </button>
-//               <button className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 transition-all">
-//                 <Download className="w-5 h-5" />
-//                 Download PDF
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* CTA Section */}
-//       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
-//         <div className="max-w-7xl mx-auto px-6 text-center">
-//           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-//             Inspired by This Project?
-//           </h2>
-//           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-//             Let's discuss how we can bring your vision to life with the same level of excellence
-//           </p>
-//           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//             <button className="px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-all shadow-xl">
-//               Start Your Project
-//             </button>
-//             <button className="px-8 py-4 bg-white text-gray-900 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl">
-//               View More Projects
-//             </button>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }

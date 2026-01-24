@@ -11,6 +11,7 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 
 /* ===============================
    Animation Variants (Type-safe)
@@ -32,6 +33,17 @@ const fadeUp: Variants = {
 };
 
 export default function ServicesPage() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleNav = (href: string) => {
+    if (pathname === href) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push(href);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* ================= HERO ================= */}
@@ -211,8 +223,10 @@ export default function ServicesPage() {
             project assessment.
           </p>
 
-          <button className="bg-white text-blue-900 px-12 py-4 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg">
-            Get a Free Consultation
+          <button 
+          onClick={() => handleNav("/contact")}
+          className="bg-white text-blue-900 px-12 py-4 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg">
+          Get a Free Consultation
           </button>
         </div>
       </section>

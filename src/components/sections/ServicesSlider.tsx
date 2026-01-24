@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
 
 const servicesData = [
   {
@@ -56,47 +56,66 @@ const servicesData = [
 
 const ServicesSlider = () => {
   return (
-    <section className="py-10 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold">OUR SERVICES ARE</h2>
-          <p className="text-gray-500 mt-2">PLATINUM HOME SERVICES</p>
+    <section className="py-12 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900">
+            Our Services Are
+          </h2>
+          <p className="text-gray-500 mt-2 tracking-wide">
+            Platinum Home Services
+          </p>
         </div>
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          slidesPerView={3}
           spaceBetween={30}
-          loop={true}  
-          pagination={{ clickable: true,el: ".custom-pagination", }}
-          autoplay={{ delay: 3000, disableOnInteraction: false,pauseOnMouseEnter: true }}
+          loop
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination",
+          }}
           breakpoints={{
             320: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+          aria-label="Platinum Home Services Slider"
         >
           {servicesData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-48 object-cover"
-                />
+              <div className="bg-white shadow-lg rounded-xl overflow-hidden h-full">
+                <div className="relative w-full h-48">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+
                 <div className="p-5">
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 mb-3">{item.desc}</p>
-                  {/* <button className="bg-orange-600 text-white px-5 py-2 rounded">
-                    Learn More
-                  </button> */}
+                  <h3 className="text-lg text-gray-900 font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* Pagination under cards */}
-        <div className=" text-center custom-pagination mt-6"/>
+
+        {/* Custom pagination */}
+        <div className="custom-pagination mt-8 flex justify-center" />
       </div>
     </section>
   );

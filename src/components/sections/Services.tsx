@@ -10,12 +10,14 @@ const services = [
     title: "Commercial Buildings",
     desc: "Office towers, retail centers, healthcare facilities & educational campuses",
     icon: Building2,
+    iconColor: "text-blue-600",
     color: "from-orange-500 to-red-500",
     category: "BUILDINGS"
   },
   {
     title: "Infrastructure Projects", 
     desc: "Highways, bridges, rail systems & municipal utilities",
+    iconColor: "text-indigo-600",
     icon: TrendingUp,
     color: "from-blue-500 to-cyan-500",
     category: "INFRASTRUCTURE"
@@ -24,6 +26,7 @@ const services = [
     title: "Industrial Facilities",
     desc: "Power plants, manufacturing plants & heavy industrial complexes", 
     icon: Hammer,
+    iconColor: "text-emerald-600",
     color: "from-emerald-500 to-green-500",
     category: "INDUSTRIAL"
   },
@@ -31,6 +34,7 @@ const services = [
     title: "Project Consulting",
     desc: "Pre-construction planning, cost management & full project oversight",
     icon: Briefcase,
+    iconColor: "text-teal-700",
     color: "from-purple-500 to-indigo-500", 
     category: "CONSULTING"
   },
@@ -38,7 +42,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-gradient-to-b from-slate-50 to-white py-10 relative overflow-hidden">
+    <section id="services" className="bg-gradient-to-b from-slate-50 to-white py-10 relative overflow-hidden">
       {/* Subtle construction pattern background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 border-2 border-orange-200 rounded-full mix-blend-multiply blur-xl" />
@@ -90,7 +94,7 @@ export default function Services() {
                     className="w-20 h-20 bg-gradient-to-r from-white/90 to-white/50 backdrop-blur-xl rounded-2xl flex items-center justify-center shadow-xl mb-8 group-hover:scale-110 transition-transform duration-500"
                     whileHover={{ rotate: 5 }}
                   >
-                    <service.icon className={`w-10 h-10 text-gray-800`} />
+                    <service.icon className={`w-10 h-10 ${service.iconColor}`} />
                   </motion.div>
                   
                   <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6 group-hover:scale-[1.02] transition-transform">

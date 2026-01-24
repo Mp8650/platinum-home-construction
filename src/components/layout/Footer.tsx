@@ -39,7 +39,6 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-
           {/* Logo + About */}
           <div>
             <h2
@@ -85,51 +84,85 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          <div className="flex flex-row sm:hidden justify-between">
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                Quick Links
+              </h3>
+              <ul className="space-y-2 text-gray-400">
+                {links.map((link) => (
+                  <li key={link.name}>
+                    <span
+                      onClick={() => handleNav(link.href)}
+                      className={`cursor-pointer hover:text-white transition ${
+                        pathname === link.href ? "text-white font-semibold" : ""
+                      }`}
+                    >
+                      {link.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 text-gray-400">
-              {links.map((link) => (
-                <li key={link.name}>
-                  <span
-                    onClick={() => handleNav(link.href)}
-                    className={`cursor-pointer hover:text-white transition ${
-                      pathname === link.href ? "text-white font-semibold" : ""
-                    }`}
-                  >
-                    {link.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            {/* Services */}
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">
+                Services
+              </h3>
+              <ul className="space-y-2 text-gray-400">
+                <li>Residential Construction</li>
+                <li>Commercial Construction</li>
+                <li>Renovation & Retrofit</li>
+                <li>Architecture & Design</li>
+                <li>Sustainable Building</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Services
-            </h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Residential Construction</li>
-              <li>Commercial Construction</li>
-              <li>Renovation & Retrofit</li>
-              <li>Architecture & Design</li>
-              <li>Sustainable Building</li>
-            </ul>
-          </div>
+            {/* Quick Links */}
+            <div className="hidden sm:block">
+              <h3 className="text-lg font-semibold text-white mb-4">
+                Quick Links
+              </h3>
+              <ul className="space-y-2 text-gray-400">
+                {links.map((link) => (
+                  <li key={link.name}>
+                    <span
+                      onClick={() => handleNav(link.href)}
+                      className={`cursor-pointer hover:text-white transition ${
+                        pathname === link.href ? "text-white font-semibold" : ""
+                      }`}
+                    >
+                      {link.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div className="hidden sm:block">
+              <h3 className="text-lg font-semibold text-white mb-4">
+                Services
+              </h3>
+              <ul className="space-y-2 text-gray-400">
+                <li>Residential Construction</li>
+                <li>Commercial Construction</li>
+                <li>Renovation & Retrofit</li>
+                <li>Architecture & Design</li>
+                <li>Sustainable Building</li>
+              </ul>
+            </div>
 
           {/* Contact & Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Contact
-            </h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
 
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-10 h-10" />
+                <MapPin className="w-6 h-6" />
                 <span>342 MILL STREET, KITCHENER, ONTARIO,N2M 0A4</span>
               </div>
               <div className="flex items-center gap-2">
@@ -137,7 +170,7 @@ export default function Footer() {
                 <span>+1 647-990-0064</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-5 h-5" />
                 <span>Platinumhomeservices01@gmail.com</span>
               </div>
             </div>
@@ -158,7 +191,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 

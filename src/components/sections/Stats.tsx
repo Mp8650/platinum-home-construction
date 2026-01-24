@@ -10,6 +10,7 @@ const stats = [
     bg: "bg-indigo-100",
     text: "text-indigo-800",
     labelText: "text-indigo-600",
+    hoverText: "group-hover:text-indigo-800",
   },
   {
     value: "100%",
@@ -17,6 +18,7 @@ const stats = [
     bg: "bg-emerald-100",
     text: "text-emerald-800",
     labelText: "text-emerald-600",
+    hoverText: "group-hover:text-emerald-800",
   },
   {
     value: "16",
@@ -24,6 +26,7 @@ const stats = [
     bg: "bg-amber-100",
     text: "text-amber-800",
     labelText: "text-amber-600",
+    hoverText: "group-hover:text-amber-800",
   },
   {
     value: "124",
@@ -31,6 +34,7 @@ const stats = [
     bg: "bg-rose-100",
     text: "text-rose-800",
     labelText: "text-rose-600",
+    hoverText: "group-hover:text-rose-800",
   },
 ];
 
@@ -43,7 +47,7 @@ export default function Stats() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
         >
           Our Achievements
         </motion.h2>
@@ -65,23 +69,23 @@ export default function Stats() {
               whileHover={{ y: -10, scale: 1.08 }}
               className="group text-center cursor-pointer"
             >
+              {/* Card */}
               <motion.div
-                className={`rounded-2xl p-6 shadow-md font-black text-3xl md:text-4xl ${stat.bg} ${stat.text}`}
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 3 + i * 0.4,
-                }}
-              >
-                {stat.value}
+  className={`h-full min-h-[140px] sm:min-h-[160px] rounded-2xl p-5 shadow-md 
+  flex flex-col items-center justify-center text-center 
+  font-black text-3xl md:text-4xl 
+  ${stat.bg} ${stat.text}`}
+>
+  {stat.value}
 
-                <p
-                  className={`mt-2 text-lg font-semibold transition-colors duration-300 group-hover:${stat.text} ${stat.labelText}`}
-                >
-                  {stat.label}
-                </p>
-              </motion.div>
+  <p
+    className={`mt-2 text-sm sm:text-base font-semibold leading-tight 
+    ${stat.labelText} ${stat.hoverText}`}
+  >
+    {stat.label}
+  </p>
+</motion.div>
+
 
               {/* underline */}
               <div

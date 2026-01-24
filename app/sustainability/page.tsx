@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 interface Pillar {
   icon: React.ComponentType<any>;
@@ -26,6 +27,17 @@ interface Project {
 
 export default function SustainabilityPage() {
   const [activePillar, setActivePillar] = useState(0);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  
+  const handleNav = (href: string) => {
+    if (pathname === href) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push(href);
+    }
+  };
 
   const pillars: Pillar[] = [
     {
@@ -196,12 +208,14 @@ export default function SustainabilityPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl shadow-xl hover:bg-gray-100 transition-all">
-              Get Free Consultation
+            <button 
+            onClick={() => handleNav("/contact")}
+            className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl shadow-xl hover:bg-gray-100 transition-all">
+            Get Free Consultation
             </button>
-            <button className="px-10 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all">
+            {/* <button className="px-10 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all">
               View Case Studies
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
