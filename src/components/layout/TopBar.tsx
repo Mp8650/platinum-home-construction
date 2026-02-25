@@ -26,7 +26,7 @@ export default function TopBar() {
             onClick={() => handleNav("/contact")}
           >
             <Phone size={14} className="mr-2 text-orange-500" />
-            647-990-0064
+            +16479900064
           </span>
 
           <span

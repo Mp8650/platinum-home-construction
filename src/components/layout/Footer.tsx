@@ -84,8 +84,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="flex flex-row sm:hidden justify-between">
-            {/* Quick Links */}
+          {/* <div className="flex flex-row sm:hidden justify-between">
+            {/* Quick Links /}
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">
                 Quick Links
@@ -106,7 +106,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Services */}
+            {/* Services /}
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">
                 Services
@@ -119,7 +119,7 @@ export default function Footer() {
                 <li>Sustainable Building</li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
             {/* Quick Links */}
             <div className="hidden sm:block">
@@ -162,20 +162,20 @@ export default function Footer() {
 
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-6 h-6" />
+                <MapPin className="w-8 h-8" />
                 <span>342 MILL STREET, KITCHENER, ONTARIO,N2M 0A4</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                <span>+1 647-990-0064</span>
+                <span>+16479900064</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5" />
-                <span>Platinumhomeservices01@gmail.com</span>
+                <span>platinumhomeservices01@gmail.com</span>
               </div>
             </div>
 
-            <div className="mt-6">
+            <div className="hidden sm:block mt-6">
               <h4 className="text-sm font-semibold text-white mb-2">
                 Newsletter
               </h4>

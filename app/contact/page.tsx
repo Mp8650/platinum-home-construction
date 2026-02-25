@@ -6,10 +6,33 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  const form = e.currentTarget;
+
+  const data = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email") as HTMLInputElement).value,
+    subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+  };
+
+  const res = await fetch("/api/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      formType: "contact",
+      data,
+    }),
+  });
+
+  if (res.ok) {
     setSubmitted(true);
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again.");
   }
+}
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -37,8 +60,8 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold">Office Address</h2>
               </div>
               <p className="text-gray-600">
-                123 Corporate Blvd, Suite 400 <br />
-                Toronto, ON, Canada
+                342 MILL STREET, KITCHENER,<br />
+                 ONTARIO,N2M 0A4
               </p>
             </div>
 
@@ -47,7 +70,7 @@ export default function ContactPage() {
                 <Phone className="w-6 h-6 text-orange-600" />
                 <h2 className="text-xl font-semibold">Call Us</h2>
               </div>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
+              <p className="text-gray-600">+16479900064</p>
               <p className="text-gray-600">Mon - Fri, 9:00 AM - 6:00 PM</p>
             </div>
 
@@ -56,7 +79,7 @@ export default function ContactPage() {
                 <Mail className="w-6 h-6 text-orange-600" />
                 <h2 className="text-xl font-semibold">Email</h2>
               </div>
-              <p className="text-gray-600">contact@yourdomain.com</p>
+              <p className="text-gray-600">platinumhomeservices01@gmail.com</p>
               <p className="text-gray-600">Support & General Enquiries</p>
             </div>
           </div>
@@ -79,6 +102,7 @@ export default function ContactPage() {
                     Full Name
                   </label>
                   <input
+                    name="name"
                     type="text"
                     required
                     className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
@@ -91,6 +115,7 @@ export default function ContactPage() {
                     Email
                   </label>
                   <input
+                    name="email"
                     type="email"
                     required
                     className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
@@ -103,6 +128,7 @@ export default function ContactPage() {
                     Subject
                   </label>
                   <input
+                    name="subject"
                     type="text"
                     required
                     className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
@@ -115,6 +141,7 @@ export default function ContactPage() {
                     Message
                   </label>
                   <textarea
+                    name="message"
                     required
                     rows={5}
                     className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"

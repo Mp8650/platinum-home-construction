@@ -17,7 +17,7 @@ export default function FloatingActions() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/647-990-0064"
+        href="https://wa.me/16479900064"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-3 bg-green-500 text-white px-4 py-3 rounded-l-xl

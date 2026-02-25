@@ -1,5 +1,5 @@
 "use client";
-
+import {useState} from "react";
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -11,6 +11,37 @@ import {
 } from "lucide-react";
 
 export default function CTA() {
+  const [submitted, setSubmitted] = useState(false);
+
+   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  const form = e.currentTarget;
+
+  const data = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value,
+    phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email") as HTMLInputElement).value,
+    //subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+  };
+
+  const res = await fetch("/api/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      formType: "contact",
+      data,
+    }),
+  });
+
+  if (res.ok) {
+    setSubmitted(true);
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again.");
+  }
+}
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-16 sm:py-24">
       {/* Soft background accents */}
@@ -69,7 +100,7 @@ export default function CTA() {
               </p>
 
               <span className="block text-2xl sm:text-3xl font-black tracking-wide">
-                (555) 123-4567
+                +16479900064
               </span>
             </motion.a>
 
@@ -99,6 +130,16 @@ export default function CTA() {
             </p>
 
             <div className="space-y-4 sm:space-y-5">
+                {submitted ? (
+              <div className="text-center">
+                <h2 className="text-2xl font-bold mb-2">
+                  Thank You!
+                </h2>
+                <p className="text-gray-600">
+                  Your message has been sent. We will contact you shortly.
+                </p>
+              </div>
+            ) : (<form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-gray-700">
@@ -107,6 +148,7 @@ export default function CTA() {
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                   <input
+                    name="name"
                     type="text"
                     placeholder="Enter your name"
                     className="w-full rounded-xl border border-gray-300 bg-white py-3 sm:py-4 pl-12 pr-4 text-gray-900 placeholder-gray-400 focus:border-emerald-500 focus:outline-none"
@@ -123,6 +165,7 @@ export default function CTA() {
                   <div className="relative">
                     <Phone className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                     <input
+                      name="phone"
                       type="tel"
                       placeholder="+1 XXXXX XXXXX"
                       className="w-full rounded-xl border border-gray-300 bg-white py-3 sm:py-4 pl-12 pr-4 text-gray-900 placeholder-gray-400 focus:border-emerald-500 focus:outline-none"
@@ -137,6 +180,7 @@ export default function CTA() {
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                     <input
+                      name="email"
                       type="email"
                       placeholder="you@email.com"
                       className="w-full rounded-xl border border-gray-300 bg-white py-3 sm:py-4 pl-12 pr-4 text-gray-900 placeholder-gray-400 focus:border-emerald-500 focus:outline-none"
@@ -153,6 +197,7 @@ export default function CTA() {
                 <div className="relative">
                   <ClipboardList className="absolute left-4 top-4 sm:top-5 h-5 w-5 text-gray-400" />
                   <textarea
+                    name="message"
                     rows={3}
                     placeholder="Villa, apartment, commercial, renovation, etc."
                     className="w-full resize-none rounded-xl border border-gray-300 bg-white py-3 sm:py-4 pl-12 pr-4 text-gray-900 placeholder-gray-400 focus:border-emerald-500 focus:outline-none"
@@ -161,9 +206,13 @@ export default function CTA() {
               </div>
 
               {/* Button */}
-              <button className="mt-4 w-full rounded-2xl bg-blue-800 py-3 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-blue-500">
+              <button 
+              type="submit"
+              className="mt-4 w-full rounded-2xl bg-blue-800 py-3 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-blue-500">
                 Request Free Quote →
               </button>
+              </form>
+            )}
             </div>
           </div>
         </motion.div>

@@ -6,10 +6,59 @@ import { Upload, Mail, User, Briefcase } from "lucide-react";
 export default function ApplyPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+
+      // READ THE FILE AS BASE64
+  const fileInput = form.elements.namedItem("resume") as HTMLInputElement;
+  const file = fileInput.files?.[0];
+
+  let resumeBase64 = "";
+  if (file) {
+    resumeBase64 = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file); // converts file to base64 data URL
+      reader.onload = () => {
+        const result = reader.result as string;
+        // strip out the prefix like "data:application/pdf;base64,"
+        const base64Only = result.split(",")[1];
+        resolve(base64Only);
+      };
+      reader.onerror = reject;
+    });
   }
+
+
+    // Collect form data
+    const formData = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      position: (form.elements.namedItem("position") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      resume: resumeBase64,
+      // For file uploads, see note below
+    };
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        alert("Failed to submit application. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("An error occurred. Please try again.");
+    }
+  }
+
 
   return (
     <div className="min-h-screen bg-gray-50 py-20 px-6">
@@ -49,6 +98,7 @@ export default function ApplyPage() {
                   <div className="relative">
                     <User className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                     <input
+                      name="name"
                       type="text"
                       required
                       placeholder="John Doe"
@@ -65,6 +115,7 @@ export default function ApplyPage() {
                   <div className="relative">
                     <Mail className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                     <input
+                      name="email"
                       type="email"
                       required
                       placeholder="john@example.com"
@@ -81,6 +132,7 @@ export default function ApplyPage() {
                   <div className="relative">
                     <Briefcase className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                     <input
+                      name="position"
                       type="text"
                       placeholder="Project Manager"
                       className="w-full border rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -96,6 +148,7 @@ export default function ApplyPage() {
                   <div className="relative">
                     <Upload className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
                     <input
+                      name="resume"
                       type="file"
                       className="w-full border rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
@@ -109,6 +162,7 @@ export default function ApplyPage() {
                   Cover Message (Optional)
                 </label>
                 <textarea
+                  name="message"
                   rows={5}
                   placeholder="Tell us why you are a good fit for this role..."
                   className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
