@@ -209,7 +209,7 @@ export default function CTA() {
               <button 
               type="submit"
               className="mt-4 w-full rounded-2xl bg-blue-800 py-3 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-blue-500">
-                Request Free Quote →
+                Get a Free Consultation →
               </button>
               </form>
             )}

@@ -1,6 +1,6 @@
 import { 
   Building, Home, Hammer, Leaf, ShieldCheck, MapPin, 
-  Award, Wrench, Users, TrendingUp, CheckCircle, ArrowRight 
+  Award, Wrench, Users, Globe,CalendarCheck, TrendingUp, CheckCircle, ArrowRight 
 } from "lucide-react";
 import React from "react";
 
@@ -205,43 +205,37 @@ export default function ExpertisePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
   {
     step: "01",
-    title: "Discovery",
-    description: "Initial consultation and site assessment",
+    title: "Consultation",
+    description: "Discuss renovation goals and project requirements.",
     bg: "bg-slate-100",
     text: "text-slate-800",
   },
   {
     step: "02",
-    title: "Design",
-    description: "Architectural planning and engineering",
+    title: "Planning",
+    description: "Develop a renovation plan tailored to the space.",
     bg: "bg-indigo-100",
     text: "text-indigo-800",
   },
   {
     step: "03",
-    title: "Planning",
-    description: "Permits, scheduling, and budgeting",
+    title: "Construction",
+    description: "Professional renovation work with attention to detail.",
     bg: "bg-amber-100",
     text: "text-amber-800",
   },
   {
     step: "04",
-    title: "Construction",
-    description: "Expert execution with quality control",
+    title: "Final Walkthrough",
+    description: "Ensure the finished project meets expectations.",
     bg: "bg-orange-100",
     text: "text-orange-800",
   },
-  {
-    step: "05",
-    title: "Completion",
-    description: "Final inspection and handover",
-    bg: "bg-emerald-100",
-    text: "text-emerald-800",
-  },
+  
 ].map((phase, idx) => (
               <div key={idx} className="relative">
                 <div className={`${phase.bg} ${phase.text} text-sm rounded-2xl p-6 shadow-lg`}>
@@ -249,7 +243,7 @@ export default function ExpertisePage() {
                   <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
                   <p className={`${phase.text} text-sm`}>{phase.description}</p>
                 </div>
-                {idx < 4 && (
+                {idx < 3 && (
                   <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-orange-300 z-10"></div>
                 )}
               </div>
@@ -269,13 +263,37 @@ export default function ExpertisePage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { title: "Canadian Expertise", desc: "Deep understanding of Canadian building codes, climate considerations, and regional requirements" },
-                { title: "Quality Assurance", desc: "Rigorous quality control at every phase with third-party inspections and certifications" },
-                { title: "Client-Focused", desc: "Transparent communication, flexible solutions, and commitment to exceeding expectations" },
-                { title: "Innovation", desc: "Latest construction technologies, sustainable practices, and cutting-edge methodologies" },
-                { title: "Safety First", desc: "Zero-compromise safety culture with ongoing training and certified safety officers" },
-                { title: "On-Time Delivery", desc: "96% on-time completion rate through meticulous planning and project management" }
-              ].map((item, idx) => (
+  {
+    icon: Hammer,
+    title: "Professional Workmanship",
+    desc: "Our renovation team delivers high-quality craftsmanship and clean finishes in every basement renovation and home improvement project.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Attention to Detail",
+    desc: "We focus on precision and detail to ensure every renovation meets the highest standards of quality and design.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Reliable Timelines",
+    desc: "Clear communication and well-planned schedules help us complete renovation projects efficiently and on time.",
+  },
+  {
+    icon: Home,
+    title: "Modern Basement Solutions",
+    desc: "We create modern and functional basement spaces designed to improve comfort and maximize living space.",
+  },
+  {
+    icon: Building,
+    title: "Quality Materials",
+    desc: "We use durable and high-quality materials to ensure long-lasting renovation results for your home.",
+  },
+  {
+    icon: Globe,
+    title: "Trusted GTA Renovation Team",
+    desc: "Homeowners across the Greater Toronto Area trust our team for reliable basement renovations and interior improvements.",
+  },
+].map((item, idx) => (
                 <div key={idx} className="flex gap-4">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                   <div>

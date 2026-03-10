@@ -40,11 +40,11 @@ export default function ContactPage() {
       <div className="bg-gradient-to-br from-orange-600 to-orange-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Contact Us
+            Contact Platinum Home Services
           </h1>
           <p className="text-lg md:text-xl text-orange-100 max-w-2xl">
-            Have a question or want to discuss a project? Our team is ready to
-            help. Reach out and we’ll respond within 24 hours.
+             If you are planning a basement renovation or home improvement project in the Greater Toronto Area,
+we would love to hear from you. Get in touch today to schedule a consultation
           </p>
         </div>
       </div>

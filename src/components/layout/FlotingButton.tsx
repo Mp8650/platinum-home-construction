@@ -1,9 +1,9 @@
 import { Mail, Instagram } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp,FaTiktok } from "react-icons/fa";
 
 export default function FloatingActions() {
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1">
       
       {/* Contact */}
       <a
@@ -38,6 +38,19 @@ export default function FloatingActions() {
       >
         <Instagram size={18} />
         <span className="whitespace-nowrap font-medium">Instagram</span>
+      </a>
+
+      {/*TikTok */}
+      <a
+        href="https://www.tiktok.com/@platinum.home.serv?_r=1&_t=ZS-94X08cT0XIb"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-3 text-white px-4 py-3 rounded-l-xl
+                   translate-x-[70%] hover:translate-x-0 transition-transform duration-300 shadow-lg
+                   bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+      >
+        <FaTiktok size={18} />
+        <span className="whitespace-nowrap font-medium">Tiktok</span>
       </a>
 
     </div>

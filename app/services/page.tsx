@@ -75,8 +75,10 @@ export default function ServicesPage() {
             variants={fadeUp}
             className="text-lg md:text-xl text-gray-100 max-w-3xl"
           >
-            We deliver high-quality residential and commercial construction
-            services with a focus on safety, craftsmanship, and on-time delivery.
+            At Platinum Home Services, we believe every renovation project should combine quality craftsmanship
+with reliable service. Our team focuses on delivering clean finishes, modern designs, and renovation
+solutions tailored to each home. Our goal is to deliver renovation results that homeowners can enjoy for
+years.
           </motion.p>
         </div>
       </section>
@@ -162,7 +164,7 @@ export default function ServicesPage() {
             variants={fadeUp}
             className="text-3xl font-bold text-gray-900 mb-12 text-center"
           >
-            Why Choose Platinum Home Services
+            Why Homeowners Choose Platinum Home Services
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

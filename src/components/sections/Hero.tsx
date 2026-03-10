@@ -21,7 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             className="text-white font-bold mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
           >
-            Building Canada’s Next Generation of Infrastructure
+            Basement Renovation & Finishing Experts in the GTA
           </motion.h1>
 
           <motion.p
@@ -30,8 +30,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-gray-200 mb-8 text-base sm:text-lg md:text-xl max-w-3xl"
           >
-            From complex infrastructure to iconic buildings, we deliver
-            construction solutions that shape communities and drive progress.
+            Platinum Home Services helps homeowners across the Greater Toronto Area transform unfinished basements and outdated interiors into modern, functional living spaces. We specialize in basement renovations, interior remodeling, and home improvements, delivering quality craftsmanship, reliable solutions, and designs that enhance comfort and increase property value.
           </motion.p>
 
           <motion.button
@@ -44,7 +43,7 @@ export default function Hero() {
   }}
   className="bg-blue-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg inline-flex items-center text-sm md:text-base"
 >
-  Explore Our Work <ArrowRight className="ml-2 h-5 w-5" />
+  Explore Our Projects <ArrowRight className="ml-2 h-5 w-5" />
 </motion.button>
 
         </div>

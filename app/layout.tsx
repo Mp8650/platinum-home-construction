@@ -1,6 +1,7 @@
 import ScrollToTop from "@/src/components/layout/ScrollToTop";
 import TopBar from "@/src/components/layout/TopBar";
 import Navbar from "@/src/components/layout/Navbar";
+import MovingTagline from "@/src/components/layout/MovingTagline";
 import Footer from "@/src/components/layout/Footer";
 import FloatingButton from '@/src/components/layout/FlotingButton';
 import type { Metadata } from "next";
@@ -37,6 +38,7 @@ export default function RootLayout({
         <ScrollToTop/>
         <TopBar/>
         <Navbar/>
+        <MovingTagline/>
         {children}
         <FloatingButton/>
         <Footer/>
