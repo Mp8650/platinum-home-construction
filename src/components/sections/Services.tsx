@@ -102,7 +102,7 @@ export default function Services() {
               ease: [0.25, 0.1, 0.25, 1],
             },
           }}
-          className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-10 border border-gray-100/50 shadow-xl will-change-transform transition-transform transition-colors duration-500 ease-out overflow-hidden h-[320px]"
+          className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-10 border border-gray-100/50 shadow-xl will-change-transform transition-transform transition-colors duration-500 ease-out overflow-hidden"
         >
           {/* Subtle background gradient */}
           <div

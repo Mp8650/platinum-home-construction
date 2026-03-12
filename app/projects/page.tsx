@@ -19,7 +19,7 @@ const projects = [
     location: "Toronto, ON",
     category: "Residential",
     year: "2024",
-    image: "/images/modern-basement.png",
+    image: "/images/modern-basement.jpeg",
     description:
       "Finished basement turned into a stylish, functional living area with updated flooring, lighting, and smart storage solutions.",
     valueTags: ["Comfort First", "Modern Design", "Increased Home Value"],
@@ -30,7 +30,7 @@ const projects = [
     location: "Mississauga, ON",
     category: "Residential",
     year: "2023",
-    image: "/images/interior-remodel.png",
+    image: "/images/interior-remodel.jpeg",
     description:
       "Interior renovation featuring open layouts, modern finishes, and enhanced lighting for a clean and inviting home.",
     valueTags: ["Attention to Detail", "Functional Layouts", "Premium Finishes"],
@@ -41,7 +41,7 @@ const projects = [
     location: "Brampton, ON",
     category: "Renovation",
     year: "2024",
-    image: "/images/luxury-basement.png",
+    image: "/images/luxury-basement.jpeg",
     description:
       "Upgraded basement with custom flooring, elegant lighting, and a cozy entertainment area designed for family living.",
     valueTags: ["Quality Craftsmanship", "Modern Comfort", "Smart Design"],
@@ -52,7 +52,7 @@ const projects = [
     location: "Oakville, ON",
     category: "Renovation",
     year: "2023",
-    image: "/images/eco-home.png",
+    image: "/images/eco-home.jpeg",
     description:
       "Sustainable renovation incorporating energy-efficient lighting, eco-friendly materials, and modern interior design.",
     valueTags: ["Sustainable Design", "Energy Efficient", "Healthy Home"],
@@ -63,7 +63,7 @@ const projects = [
     location: "Toronto, ON",
     category: "Residential",
     year: "2023",
-    image: "/images/open-concept.png",
+    image: "/images/open-concept.jpeg",
     description:
       "Home renovation creating an open-concept layout with modern flooring, upgraded kitchen, and enhanced natural light.",
     valueTags: ["Spacious Design", "Contemporary Style", "Functional Spaces"],
@@ -74,7 +74,7 @@ const projects = [
     location: "Mississauga, ON",
     category: "Renovation",
     year: "2022",
-    image: "/images/recreation-room.png",
+    image: "/images/recreation-room.jpeg",
     description:
       "Converted basement into a recreation room with stylish flooring, entertainment setup, and smart storage solutions.",
     valueTags: ["Family Friendly", "Modern Finish", "Functional Design"],
