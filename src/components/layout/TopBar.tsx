@@ -50,7 +50,7 @@ export default function TopBar() {
             href="https://www.linkedin.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition"
+            className="text-blue-600 hover:text-blue-500 transition"
           >
             <Linkedin size={16} />
           </a>
@@ -58,7 +58,7 @@ export default function TopBar() {
             href="https://twitter.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition"
+            className="text-sky-400 hover:text-sky-300 transition"
           >
             <Twitter size={16} />
           </a>
@@ -66,7 +66,7 @@ export default function TopBar() {
             href="https://www.facebook.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition"
+            className="text-blue-500 hover:text-blue-400 transition"
           >
             <Facebook size={16} />
           </a>

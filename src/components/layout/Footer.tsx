@@ -57,28 +57,28 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/platinumhomes.gta?utm_source=qr"
                 target="_blank"
-                className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+                className="p-2 rounded-full bg-gray-800 text-pink-500 hover:text-pink-400 hover:bg-gray-700 transition"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/login/"
                 target="_blank"
-                className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+                className="p-2 rounded-full bg-gray-800 text-blue-600 hover:text-blue-500 hover:bg-gray-700 transition"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://x.com/twitt_login"
                 target="_blank"
-                className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+                className="p-2 rounded-full bg-gray-800 text-sky-400 hover:text-sky-300 hover:bg-gray-700 transition"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.facebook.com/login"
                 target="_blank"
-                className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition"
+                className="p-2 rounded-full bg-gray-800 text-blue-500 hover:text-blue-400 hover:bg-gray-700 transition"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -148,11 +148,12 @@ export default function Footer() {
                 Services
               </h3>
               <ul className="space-y-2 text-gray-400">
-                <li>Residential Construction</li>
-                <li>Commercial Construction</li>
-                <li>Renovation & Retrofit</li>
-                <li>Architecture & Design</li>
-                <li>Sustainable Building</li>
+                <li>Basement Renovation & Finishing</li>
+  <li>Interior Home Renovations</li>
+  <li>Home Improvement Projects</li>
+  <li>Renovation Consultation & Planning</li>
+  <li>Eco-Friendly Renovations</li>
+  <li>Custom Home Improvements</li>
               </ul>
             </div>
 

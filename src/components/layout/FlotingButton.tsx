@@ -46,8 +46,8 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-3 text-white px-4 py-3 rounded-l-xl
-                   translate-x-[70%] hover:translate-x-0 transition-transform duration-300 shadow-lg
-                   bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+             translate-x-[70%] hover:translate-x-0 transition-transform duration-300 shadow-lg
+             bg-gradient-to-r from-[#69C9D0] via-[#EE1D52] to-white"
       >
         <FaTiktok size={18} />
         <span className="whitespace-nowrap font-medium">Tiktok</span>

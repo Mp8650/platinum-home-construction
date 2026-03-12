@@ -5,6 +5,8 @@ import {
   ShieldCheck,
   Hammer,
   Truck,
+  ClipboardIcon,
+  Building2,
   Home,
   Leaf,
   Globe,
@@ -102,37 +104,37 @@ years.
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
-            {
-              icon: Building,
-              title: "Commercial Construction",
-              desc: "End-to-end commercial construction for offices, retail spaces, and mixed-use developments.",
-            },
-            {
-              icon: Home,
-              title: "Residential Construction",
-              desc: "Custom-built homes and residential projects focused on quality, comfort, and efficiency.",
-            },
-            {
-              icon: Hammer,
-              title: "Renovation & Remodeling",
-              desc: "Professional renovations that modernize spaces, improve functionality, and increase value.",
-            },
-            {
-              icon: Leaf,
-              title: "Green Building Solutions",
-              desc: "Sustainable construction practices using eco-friendly materials and energy-efficient designs.",
-            },
-            {
-              icon: ShieldCheck,
-              title: "Safety & Compliance",
-              desc: "Strict adherence to Canadian safety regulations and industry best practices.",
-            },
-            {
-              icon: Truck,
-              title: "Project Management",
-              desc: "Complete planning, coordination, and logistics to ensure projects are delivered on time.",
-            },
-          ].map((service, i) => (
+  {
+    icon: Building2,
+    title: "Basement Renovation & Finishing",
+    desc: "Transform unfinished basements into functional, modern living spaces with framing, drywall, flooring, lighting, and full finishing.",
+  },
+  {
+    icon: Home,
+    title: "Interior Home Renovations",
+    desc: "Update and modernize your interiors with improved layouts, flooring, walls, lighting, and stylish designs.",
+  },
+  {
+    icon: Hammer,
+    title: "Home Improvement Projects",
+    desc: "Enhance the functionality and appearance of your home through professional repair, upgrades, and remodeling projects.",
+  },
+  {
+    icon: Leaf,
+    title: "Eco-Friendly Renovations",
+    desc: "Incorporate sustainable practices and energy-efficient materials into your renovation projects for a greener home.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Safety & Quality Assurance",
+    desc: "Our team ensures every project adheres to safety standards and delivers high-quality workmanship you can trust.",
+  },
+  {
+    icon: ClipboardIcon,
+    title: "Renovation Consultation & Planning",
+    desc: "Professional guidance to plan and design your renovation project, ensuring your vision comes to life efficiently.",
+  },
+].map((service, i) => (
             <motion.div
               key={i}
               custom={i}

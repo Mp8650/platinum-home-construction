@@ -1,5 +1,5 @@
 import { 
-  Building, Home, Hammer, Leaf, ShieldCheck, MapPin, 
+  Building, Home, Hammer, Leaf, ShieldCheck, MapPin,ClipboardIcon,
   Award, Wrench, Users, Globe,CalendarCheck, TrendingUp, CheckCircle, ArrowRight 
 } from "lucide-react";
 import React from "react";
@@ -29,76 +29,76 @@ interface Capability {
 // ------------------------
 const expertiseAreas: ExpertiseArea[] = [
   {
-    icon: Building,
-    title: "Commercial Construction",
-    description: "Offices, retail spaces, and industrial buildings designed and built with strict quality standards and regulatory compliance.",
-    color: "blue",
-    tags: ["Design-Build", "Execution", "Delivery"],
-    stats: { label: "Projects", value: "150+" }
+    icon: Hammer, // Renovation icon
+    title: "Basement Renovation & Finishing",
+    description: "Transform unfinished basements into functional, stylish living spaces with flooring, lighting, and full finishing.",
+    color: "orange",
+    tags: ["Modern Design", "Functional Spaces", "Home Value"],
+    stats: { label: "Projects Completed", value: "200+" },
   },
   {
     icon: Home,
-    title: "Residential Projects",
-    description: "Modern homes, luxury estates, and multi-family developments with a focus on comfort, functionality, and sustainability.",
+    title: "Interior Home Renovations",
+    description: "Upgrade interiors with modern layouts, flooring, walls, and lighting for a clean, comfortable home.",
     color: "green",
-    tags: ["Luxury Living", "Modern Design", "Premium Quality"],
-    stats: { label: "Homes Built", value: "500+" }
-  },
-  {
-    icon: Hammer,
-    title: "Renovation & Retrofit",
-    description: "Complete renovations and retrofits for improved performance, enhanced safety standards, and modern aesthetics.",
-    color: "orange",
-    tags: ["Upgrades", "Modernization", "Value-Add"],
-    stats: { label: "Renovations", value: "300+" }
+    tags: ["Open Concept", "Premium Finishes", "Functional Design"],
+    stats: { label: "Homes Renovated", value: "150+" },
   },
   {
     icon: Leaf,
-    title: "Sustainable Construction",
-    description: "Eco-friendly building practices using low-carbon materials, renewable energy systems, and green building certifications.",
+    title: "Eco-Friendly Renovations",
+    description: "Sustainable renovation practices using energy-efficient materials and eco-conscious design solutions.",
     color: "emerald",
-    tags: ["LEED Certified", "Net-Zero", "Eco-Friendly"],
-    stats: { label: "Green Projects", value: "75+" }
+    tags: ["Energy Efficient", "Eco-Friendly Materials", "Healthy Home"],
+    stats: { label: "Green Projects", value: "50+" },
   },
   {
     icon: ShieldCheck,
-    title: "Safety & Compliance",
-    description: "Industry-leading safety protocols and complete regulatory compliance across all project phases and construction sites.",
+    title: "Safety & Quality Assurance",
+    description: "Every project follows strict safety standards and quality controls to ensure reliable, long-lasting results.",
     color: "indigo",
-    tags: ["OH&S Standards", "Compliance", "Zero Incidents"],
-    stats: { label: "Safety Rating", value: "98%" }
+    tags: ["Safety First", "Quality Craftsmanship", "Reliable Work"],
+    stats: { label: "Safety Rating", value: "100%" },
   },
   {
-    icon: MapPin,
-    title: "Project Management",
-    description: "End-to-end project planning, scheduling, budget control, and stakeholder management for on-time, on-budget delivery.",
+    icon: ClipboardIcon, // Planning icon
+    title: "Renovation Consultation & Planning",
+    description: "Professional guidance from planning to execution, ensuring your renovation meets your vision and goals.",
     color: "slate",
-    tags: ["Planning", "Coordination", "Delivery"],
-    stats: { label: "On-Time Rate", value: "96%" }
-  }
+    tags: ["Planning", "Design", "Project Coordination"],
+    stats: { label: "Satisfied Clients", value: "300+" },
+  },
+  {
+  icon: Wrench, // Tool/upgrade icon
+  title: "Custom Home Improvements",
+  description: "Tailored home upgrades and improvements that enhance functionality, style, and long-term value for your property.",
+  color: "blue",
+  tags: ["Tailored Solutions", "Functionality", "Modern Design"],
+  stats: { label: "Projects Delivered", value: "120+" },
+},
 ];
 
 const capabilities: Capability[] = [
   {
     icon: Award,
-    title: "Industry Recognition",
-    description: "Award-winning construction excellence across Canada"
+    title: "Trusted Expertise",
+    description: "Over 15 years delivering high-quality home renovations across the Greater Toronto Area",
   },
   {
     icon: Users,
-    title: "Expert Team",
-    description: "Certified professionals with 15+ years average experience"
+    title: "Skilled Team",
+    description: "Certified professionals dedicated to modern design and precise craftsmanship",
   },
   {
     icon: TrendingUp,
-    title: "Proven Track Record",
-    description: "$500M+ in successfully completed projects"
+    title: "Proven Results",
+    description: "Hundreds of satisfied homeowners with beautifully renovated homes",
   },
   {
     icon: Wrench,
-    title: "Advanced Technology",
-    description: "BIM, drone surveying, and project management software"
-  }
+    title: "Advanced Techniques",
+    description: "Modern renovation methods, high-quality materials, and smart home solutions",
+  },
 ];
 
 const colorVariants: Record<ColorKey, { icon: string; badge: string; hover: string }> = {
