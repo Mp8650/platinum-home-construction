@@ -20,22 +20,31 @@ export function getTransporter() {
 
 export async function sendEmail({
   to,
+  cc,
+  bcc,
   subject,
   html,
   replyTo,
+  attachments,
 }: {
-  to: string;
+  to: string | string[];
+  cc?: string | string[];
+  bcc?: string | string[];
   subject: string;
   html: string;
   replyTo?: string;
+  attachments?: any[];
 }) {
   const transporter = getTransporter();
 
   return transporter.sendMail({
     from: `"Website" <${process.env.SMTP_USER}>`,
     to,
+    cc,
+    bcc,
     subject,
     html,
     replyTo,
+    attachments,
   });
 }

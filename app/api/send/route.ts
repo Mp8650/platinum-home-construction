@@ -8,10 +8,9 @@ export async function POST(req: Request) {
     let subject = "";
     let html = "";
 
-    // Switch based on form type
     switch (formType) {
       case "contact":
-        subject = `New Contact Form Submission`;
+        subject = "New Contact Form Submission";
         html = `
           <h3>Contact Form</h3>
           <p><strong>Name:</strong> ${data.name}</p>
@@ -22,7 +21,7 @@ export async function POST(req: Request) {
         break;
 
       case "quote":
-        subject = `New Quote Request`;
+        subject = "New Quote Request";
         html = `
           <h3>Quote Request</h3>
           <p><strong>Name:</strong> ${data.name}</p>
@@ -31,31 +30,51 @@ export async function POST(req: Request) {
         `;
         break;
 
+      case "apply":
+        subject = "New Job Application";
+        html = `
+          <h3>Job Application</h3>
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Phone:</strong> ${data.phone}</p>
+        `;
+        break;
+
       default:
-        return NextResponse.json({ error: "Invalid form type" }, { status: 400 });
+        return NextResponse.json(
+          { error: "Invalid form type" },
+          { status: 400 }
+        );
     }
 
     const attachments: any[] = [];
+
     if (formType === "apply" && data.resume) {
-      // data.resume should be base64 string (no prefix)
       attachments.push({
-        filename: `resume-${data.name.replace(/\s+/g, "_")}.pdf`, 
-        content: Buffer.from(data.resume, "base64"),  // decode base64 into buffer
-        // Optionally set MIME type if known (example for PDF):
-        // contentType: "application/pdf",
+        filename: `resume-${data.name.replace(/\s+/g, "_")}.pdf`,
+        content: Buffer.from(data.resume, "base64"),
+        contentType: "application/pdf",
       });
     }
 
-
     await sendEmail({
-      to: process.env.SMTP_USER!,
+      to: process.env.RECEIVER_EMAIL!,
+      cc: process.env.CC_EMAIL,
+      bcc: process.env.BCC_EMAIL,
       subject,
       html,
       replyTo: data.email,
+      attachments,
     });
 
     return NextResponse.json({ success: true });
+
   } catch (error) {
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.error(error);
+
+    return NextResponse.json(
+      { success: false, message: "Email sending failed" },
+      { status: 500 }
+    );
   }
 }
