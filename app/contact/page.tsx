@@ -57,7 +57,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <MapPin className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl font-semibold">Office Address</h2>
+                <h2 className="text-xl text-gray-600 font-bold">Office Address</h2>
               </div>
               <p className="text-gray-600">
                 342 MILL STREET, KITCHENER,<br />
@@ -68,7 +68,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <Phone className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl font-semibold">Call Us</h2>
+                <h2 className="text-xl text-gray-600 font-bold">Call Us</h2>
               </div>
               <p className="text-gray-600">+16479900064</p>
               <p className="text-gray-600">Mon - Fri, 9:00 AM - 6:00 PM</p>
@@ -77,7 +77,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <Mail className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl font-semibold">Email</h2>
+                <h2 className="text-xl text-gray-600 font-bold">Email</h2>
               </div>
               <p className="text-gray-600">platinumhomeservices01@gmail.com</p>
               <p className="text-gray-600">Support & General Enquiries</p>
@@ -105,7 +105,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
                     name="name"
                     type="text"
                     required
-                    className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
+                    className="w-full border text-gray-500 rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
                     placeholder="John Doe"
                   />
                 </div>
@@ -118,7 +118,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
                     name="email"
                     type="email"
                     required
-                    className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
+                    className="w-full border rounded-lg p-3 text-gray-500 focus:ring-2 focus:ring-orange-500"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -131,7 +131,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
                     name="subject"
                     type="text"
                     required
-                    className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
+                    className="w-full border rounded-lg p-3 text-gray-500 focus:ring-2 focus:ring-orange-500"
                     placeholder="Project inquiry, support, etc."
                   />
                 </div>
@@ -144,7 +144,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
                     name="message"
                     required
                     rows={5}
-                    className="w-full border rounded-lg p-3 focus:ring-2 focus:ring-orange-500"
+                    className="w-full border rounded-lg p-3 text-gray-500 focus:ring-2 focus:ring-orange-500"
                     placeholder="Write your message here..."
                   />
                 </div>
