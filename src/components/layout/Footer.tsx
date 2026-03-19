@@ -195,11 +195,19 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Construction. All rights reserved.
-        </div>
-      </div>
+     <div className="border-t border-gray-800">
+  <div className="max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-sm">
+    © {new Date().getFullYear()} Construction, All rights reserved | Designed by{" "}
+    <a
+      href="https://hexiora.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-orange-400 hover:text-orange-300 transition"
+    >
+      Hexiora
+    </a>
+  </div>
+</div>
     </footer>
   );
 }
