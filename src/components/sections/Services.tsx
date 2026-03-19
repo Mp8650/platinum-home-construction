@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import {
   Building2,
   Hammer,
+  ShieldCheck,
+  CheckCircle,
+  Award,
   TrendingUp,
   Paintbrush,
   Wrench,
@@ -157,9 +160,9 @@ export default function Services() {
       {[
         { icon: Users, label: "Licensed", color: "text-blue-600" },
         { icon: Shield, label: "Insured", color: "text-emerald-600" },
-        { icon: Truck, label: "Bonded", color: "text-orange-600" },
-        { icon: Building2, label: "CCDC", color: "text-purple-600" },
-        { icon: TrendingUp, label: "COR Certified", color: "text-indigo-600" },
+        { icon: ShieldCheck, label: "Fully Insured", color: "text-orange-600" },
+{ icon: Award, label: "Certified Professionals", color: "text-purple-600" },
+{ icon: CheckCircle, label: "Quality Guaranteed", color: "text-indigo-600" },
         { icon: Hammer, label: "WSIB Clear", color: "text-gray-700" },
       ].map((trust, i) => (
         <motion.div

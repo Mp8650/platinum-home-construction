@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Phone, Instagram, Youtube, Facebook } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function TopBar() {
@@ -29,41 +29,41 @@ export default function TopBar() {
             +16479900064
           </span>
 
-          <span
+          {/* <span
             className="hidden md:block cursor-pointer hover:text-white transition"
             onClick={() => handleNav("/careers")}
           >
             Careers
-          </span>
+          </span> */}
 
-          <span
+          {/* <span
             className="hidden md:block cursor-pointer hover:text-white transition"
             onClick={() => handleNav("/investor-relations")}
           >
             Investor Relations
-          </span>
+          </span> */}
         </div>
 
         {/* Right */}
         <div className="flex gap-4">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.instagram.com/platinumhomes.gta?utm_source=qr"
             target="_blank"
             rel="noreferrer"
-            className="text-blue-600 hover:text-blue-500 transition"
+            className="text-pink-500 hover:text-pink-600 transition"
           >
-            <Linkedin size={16} />
+            <Instagram size={16} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://youtube.com/@platinum1575?si=stG1f5tnXcepm0lc"
             target="_blank"
             rel="noreferrer"
-            className="text-sky-400 hover:text-sky-300 transition"
+            className="text-red-400 hover:text-red-300 transition"
           >
-            <Twitter size={16} />
+            <Youtube size={16} />
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/share/1Qwu1x7D5P/?mibextid=wwXIfr"
             target="_blank"
             rel="noreferrer"
             className="text-blue-500 hover:text-blue-400 transition"

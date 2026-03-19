@@ -30,7 +30,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-gray-200 mb-8 text-base sm:text-lg md:text-xl max-w-3xl"
           >
-            Platinum Home Services helps homeowners across the Greater Toronto Area transform unfinished basements and outdated interiors into modern, functional living spaces. We specialize in basement renovations, interior remodeling, and home improvements, delivering quality craftsmanship, reliable solutions, and designs that enhance comfort and increase property value.
+            Platinum Home Services renovates basements and interiors into modern, functional spaces, enhancing comfort and property value.
           </motion.p>
 
           <motion.button

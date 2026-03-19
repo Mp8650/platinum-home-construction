@@ -16,7 +16,6 @@ export default function Navbar() {
     { name: "Services", link: "/services" },
     { name: "Projects", link: "/projects" },
     { name: "Expertise", link: "/expertise" },
-    { name: "Sustainability", link: "/sustainability" },
     { name: "Contact", link: "/contact" },
   ];
 

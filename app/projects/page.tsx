@@ -240,13 +240,13 @@ export default function ProjectsPage() {
                   ))}
                 </div>
 
-                <Link
+                {/* <Link
                   href="/projects/apply"
                   className="inline-flex items-center gap-2 font-bold text-orange-600 hover:text-orange-700"
                 >
                   View Project Details
                   <ArrowRight className="w-5 h-5" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}

@@ -102,30 +102,7 @@
       "type": "website"
     }
   },
-
-  "sustainability": {
-    "title": "Sustainable Construction in Canada | Platinum Home Services",
-    "meta_description": "Platinum Home Services integrates sustainability in every construction phase — energy efficiency, eco-friendly materials, waste reduction, and renewable energy solutions for greener buildings.",
-    "canonical": "https://platinum-home-construction.vercel.app/sustainability",
-    "keywords": [
-      "sustainable construction Canada",
-      "green building Canada",
-      "LEED construction Canada",
-      "energy efficient construction Canada",
-      "eco friendly construction Canada",
-      "green building materials Canada",
-      "renewable energy construction Canada",
-      "net zero construction Canada",
-      "sustainable building solutions Canada"
-    ],
-    "og": {
-      "title": "Sustainable Construction in Canada | Platinum Home Services",
-      "description": "Discover how Platinum Home Services builds responsibly with energy efficient designs, eco-friendly materials, waste reduction, and renewable energy integration.",
-      "url": "https://platinum-home-construction.vercel.app/sustainability",
-      "type": "website"
-    }
-  },
-
+  
   "contact": {
     "title": "Contact Platinum Home Services | Construction Company Canada",
     "meta_description": "Contact Platinum Home Services for construction project inquiries, quotes, and consultations in Canada. Our team is ready to build your dream home or commercial space.",

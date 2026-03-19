@@ -43,7 +43,7 @@ export default function Sustainability() {
             {[
               { value: "75%", label: "Carbon Reduction", icon: Leaf, color: "text-emerald-600" },
               { value: "95%", label: "Recycled Materials", icon: Recycle, color: "text-green-600" },
-              { value: "LEED Certified", label: "All Projects", icon: Shield, color: "text-blue-600" },
+              { value: "100%", label: "Quality Assurance", icon: Shield, color: "text-blue-600" },
               { value: "30%", label: "Energy Savings", icon: Zap, color: "text-yellow-500" },
             ].map((stat, i) => (
               <motion.div

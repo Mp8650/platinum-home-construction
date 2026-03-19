@@ -16,9 +16,7 @@ export default function Home() {
       <Services />
       <Sustainability />
       <CTA />
-        
-        
-      
+    
     </>
   );
 }

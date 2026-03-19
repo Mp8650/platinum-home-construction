@@ -1,3 +1,4 @@
+"use client";
 import {
   Building,
   Home,
@@ -16,7 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import React from "react";
-
+import { usePathname, useRouter } from "next/navigation";
 // ------------------------
 // Type Definitions
 // ------------------------
@@ -102,7 +103,7 @@ const capabilities: Capability[] = [
     icon: Award,
     title: "Trusted Expertise",
     description:
-      "Over 15 years delivering high-quality home renovations across the Greater Toronto Area",
+      "Over 6 years delivering high-quality home renovations across the Greater Toronto Area",
   },
   {
     icon: Users,
@@ -164,6 +165,15 @@ const colorVariants: Record<
 // Component
 // ------------------------
 export default function ExpertisePage() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+
+   const handleNav = (href: string) => {
+    pathname === href
+      ? window.scrollTo({ top: 0, behavior: "smooth" })
+      : router.push(href);
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -409,10 +419,14 @@ export default function ExpertisePage() {
             detailed project assessment
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105">
+            <button 
+            onClick={() => handleNav("/contact")}
+            className="px-10 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105">
               Get Free Consultation
             </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all">
+            <button 
+            onClick={() => handleNav("/projects")}
+            className="px-10 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-orange-600 transition-all">
               View Our Projects
             </button>
           </div>

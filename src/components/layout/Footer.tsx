@@ -7,7 +7,7 @@ import {
   MapPin,
   Instagram,
   Linkedin,
-  Twitter,
+  Youtube,
   Facebook,
 } from "lucide-react";
 
@@ -20,7 +20,7 @@ export default function Footer() {
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Expertise", href: "/expertise" },
-    { name: "Sustainability", href: "/sustainability" },
+    // { name: "Sustainability", href: "/sustainability" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ];
@@ -61,22 +61,22 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="https://www.linkedin.com/company/login/"
                 target="_blank"
                 className="p-2 rounded-full bg-gray-800 text-blue-600 hover:text-blue-500 hover:bg-gray-700 transition"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
-                href="https://x.com/twitt_login"
+                href="https://youtube.com/@platinum1575?si=stG1f5tnXcepm0lc"
                 target="_blank"
-                className="p-2 rounded-full bg-gray-800 text-sky-400 hover:text-sky-300 hover:bg-gray-700 transition"
+                className="p-2 rounded-full bg-gray-800 text-red-400 hover:text-red-300 hover:bg-gray-700 transition"
               >
-                <Twitter className="w-5 h-5" />
+                <Youtube className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/login"
+                href="https://www.facebook.com/share/1Qwu1x7D5P/?mibextid=wwXIfr"
                 target="_blank"
                 className="p-2 rounded-full bg-gray-800 text-blue-500 hover:text-blue-400 hover:bg-gray-700 transition"
               >
@@ -171,12 +171,12 @@ export default function Footer() {
                 <span>+16479900064</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5" />
+               <Mail className="w-4 h-4 flex-shrink-0 " />
                 <span>platinumhomeservices01@gmail.com</span>
               </div>
             </div>
 
-            <div className="hidden sm:block mt-6">
+            {/* <div className="hidden sm:block mt-6">
               <h4 className="text-sm font-semibold text-white mb-2">
                 Newsletter
               </h4>
@@ -190,7 +190,7 @@ export default function Footer() {
                   Subscribe
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
