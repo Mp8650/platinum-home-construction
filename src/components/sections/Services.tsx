@@ -161,8 +161,8 @@ export default function Services() {
         { icon: Users, label: "Licensed", color: "text-blue-600" },
         { icon: Shield, label: "Insured", color: "text-emerald-600" },
         { icon: ShieldCheck, label: "Fully Insured", color: "text-orange-600" },
-{ icon: Award, label: "Certified Professionals", color: "text-purple-600" },
-{ icon: CheckCircle, label: "Quality Guaranteed", color: "text-indigo-600" },
+{ icon: Award, label: "Certified Prof.", color: "text-purple-600" },
+{ icon: CheckCircle, label: "Quality Assured", color: "text-indigo-600" },
         { icon: Hammer, label: "WSIB Clear", color: "text-gray-700" },
       ].map((trust, i) => (
         <motion.div
