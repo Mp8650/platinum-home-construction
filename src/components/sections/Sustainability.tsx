@@ -81,7 +81,7 @@ export default function Sustainability() {
 
               {/* Certification tags */}
               <div className="absolute top-6 left-6 space-y-3">
-                {["LEED Gold", "Net Zero Ready", "B Corp Certified"].map((label) => (
+                {["Quality Craftsmanship", "Energy Efficient", "Modern Design"].map((label) => (
                   <span
                     key={label}
                     className="inline-flex items-center rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-gray-800 shadow backdrop-blur"
