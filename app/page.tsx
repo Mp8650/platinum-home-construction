@@ -5,6 +5,7 @@ import Services from "@/src/components/sections/Services";
 import Sustainability from "@/src/components/sections/Sustainability";
 import CTA from "@/src/components/sections/CTA";
 import ServicesSlider from "@/src/components/sections/ServicesSlider";
+import VideoShowcase from "@/src/components/sections/Videos";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Stats />
       <ServicesSlider/>
       <Services />
+      <VideoShowcase/>
       <Sustainability />
       <CTA />
     
