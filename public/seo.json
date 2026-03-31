@@ -2,7 +2,7 @@
   "home": {
     "title": "Platinum Home Services | Best Construction Company in Canada",
     "meta_description": "Platinum Home Services provides professional basement renovation, basement finishing, and home improvement services across the Greater Toronto Area. Contact us today for a consultation",
-    "canonical": "https://platinum-home-construction.vercel.app/",
+    "canonical": "https://platinumhomeservices.ca/",
     "keywords": [
       "construction company Canada",
       "construction services Canada",
@@ -16,7 +16,7 @@
     "og": {
       "title": "Platinum Home Services | Best Construction Company in Canada",
       "description": "Trusted construction company in Canada offering residential and commercial construction, renovation, and project management services.",
-      "url": "https://platinum-home-construction.vercel.app/",
+      "url": "https://platinumhomeservices.ca",
       "type": "website"
     }
   },
@@ -24,7 +24,7 @@
   "services": {
     "title": "Construction Services in Canada | Platinum Home Services",
     "meta_description": "Explore our construction services in Canada including residential building, commercial construction, renovation, and project management. Quality workmanship and timely delivery.",
-    "canonical": "https://platinum-home-construction.vercel.app/services",
+    "canonical": "https://platinumhomeservices.ca/services",
     "keywords": [
       "construction services Canada",
       "residential construction Canada",
@@ -37,7 +37,7 @@
     "og": {
       "title": "Construction Services in Canada | Platinum Home Services",
       "description": "Residential building, commercial construction, renovation, and project management services in Canada.",
-      "url": "https://platinum-home-construction.vercel.app/services",
+      "url": "https://platinumhomeservices.ca/services",
       "type": "website"
     }
   },
@@ -45,7 +45,7 @@
   "projects": {
     "title": "Construction Projects in Canada | Platinum Home Services Portfolio",
     "meta_description": "View our portfolio of construction projects in Canada. From residential homes to commercial buildings, see our completed and ongoing projects with quality craftsmanship.",
-    "canonical": "https://platinum-home-construction.vercel.app/projects",
+    "canonical": "https://platinumhomeservices.ca/projects",
     "keywords": [
       "construction projects Canada",
       "construction portfolio Canada",
@@ -58,7 +58,7 @@
     "og": {
       "title": "Construction Projects in Canada | Platinum Home Services Portfolio",
       "description": "Explore our portfolio of completed and ongoing construction projects in Canada.",
-      "url": "https://platinum-home-construction.vercel.app/projects",
+      "url": "https://platinumhomeservices.ca/projects",
       "type": "website"
     }
   },
@@ -66,7 +66,7 @@
   "projects/apply": {
     "title": "Apply for Construction Projects | Platinum Home Services Canada",
     "meta_description": "Apply for construction projects with Platinum Home Services in Canada. Contractors and subcontractors can submit proposals, bids, and partnership requests.",
-    "canonical": "https://platinum-home-construction.vercel.app/projects/apply",
+    "canonical": "https://platinumhomeservices.ca/projects/apply",
     "keywords": [
       "apply construction projects Canada",
       "construction project application Canada",
@@ -77,7 +77,7 @@
     "og": {
       "title": "Apply for Construction Projects | Platinum Home Services Canada",
       "description": "Submit your application for construction projects and partnerships with Platinum Home Services.",
-      "url": "https://platinum-home-construction.vercel.app/projects/apply",
+      "url": "https://platinumhomeservices.ca/projects/apply",
       "type": "website"
     }
   },
@@ -85,7 +85,7 @@
   "expertise": {
     "title": "Construction Expertise in Canada | Platinum Home Services",
     "meta_description": "Discover our construction expertise in Canada including building, renovation, project management, and engineering services. We deliver high quality and sustainable construction solutions.",
-    "canonical": "https://platinum-home-construction.vercel.app/expertise",
+    "canonical": "https://platinumhomeservices.ca/expertise",
     "keywords": [
       "construction expertise Canada",
       "building expertise Canada",
@@ -98,7 +98,7 @@
     "og": {
       "title": "Construction Expertise in Canada | Platinum Home Services",
       "description": "Explore our construction expertise including building, renovation, and engineering services.",
-      "url": "https://platinum-home-construction.vercel.app/expertise",
+      "url": "https://platinumhomeservices.ca/expertise",
       "type": "website"
     }
   },
@@ -106,7 +106,7 @@
   "contact": {
     "title": "Contact Platinum Home Services | Construction Company Canada",
     "meta_description": "Contact Platinum Home Services for construction project inquiries, quotes, and consultations in Canada. Our team is ready to build your dream home or commercial space.",
-    "canonical": "https://platinum-home-construction.vercel.app/contact",
+    "canonical": "https://platinumhomeservices.ca/contact",
     "keywords": [
       "contact construction company Canada",
       "construction quote Canada",
@@ -118,7 +118,7 @@
     "og": {
       "title": "Contact Platinum Home Services | Construction Company Canada",
       "description": "Get in touch with our team for construction inquiries, quotes, and consultations in Canada.",
-      "url": "https://platinum-home-construction.vercel.app/contact",
+      "url": "https://platinumhomeservices.ca/contact",
       "type": "website"
     }
   },
@@ -126,7 +126,7 @@
   "careers": {
     "title": "Careers in Construction | Platinum Home Services Canada",
     "meta_description": "Explore career opportunities in construction across Canada with Platinum Home Services. Apply for jobs in project management, engineering, site supervision, and more.",
-    "canonical": "https://platinum-home-construction.vercel.app/careers",
+    "canonical": "https://platinumhomeservices.ca/careers",
     "keywords": [
       "construction jobs Canada",
       "construction careers Canada",
@@ -138,7 +138,7 @@
     "og": {
       "title": "Careers in Construction | Platinum Home Services Canada",
       "description": "Explore career opportunities and job openings in construction across Canada.",
-      "url": "https://platinum-home-construction.vercel.app/careers",
+      "url": "https://platinumhomeservices.ca/careers",
       "type": "website"
     }
   },
@@ -146,7 +146,7 @@
   "investor-relations": {
     "title": "Investor Relations | Platinum Home Services Canada",
     "meta_description": "Investor relations page for Platinum Home Services Canada. View company updates, financial reports, and investor announcements for our construction business.",
-    "canonical": "https://platinum-home-construction.vercel.app/investor-relations",
+    "canonical": "https://platinumhomeservices.ca/investor-relations",
     "keywords": [
       "construction investor relations Canada",
       "construction company investors Canada",
@@ -157,7 +157,7 @@
     "og": {
       "title": "Investor Relations | Platinum Home Services Canada",
       "description": "Company updates, financial reports, and investor information for our construction business.",
-      "url": "https://platinum-home-construction.vercel.app/investor-relations",
+      "url": "https://platinumhomeservices.ca/investor-relations",
       "type": "website"
     }
   }
