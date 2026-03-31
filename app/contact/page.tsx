@@ -71,7 +71,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
                 <h2 className="text-xl text-gray-600 font-bold">Call Us</h2>
               </div>
               <p className="text-gray-600">+16479900064</p>
-              <p className="text-gray-600">Mon - Fri, 9:00 AM - 6:00 PM</p>
+              <p className="text-gray-600">Mon - Sat, 9:00 AM - 6:00 PM</p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-md p-8">

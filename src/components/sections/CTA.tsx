@@ -96,7 +96,7 @@ export default function CTA() {
               </h4>
 
               <p className="mb-2 text-sm sm:text-base text-gray-600">
-                Mon – Sat | 9AM – 7PM
+                Mon – Sat | 9AM – 6PM
               </p>
 
               <span className="block text-2xl sm:text-3xl font-black tracking-wide">
