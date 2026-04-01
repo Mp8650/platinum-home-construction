@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay,Navigation } from "swiper/modules";
 import "swiper/css";
 import Container from "@/src/components/ui/Container";
 
@@ -35,7 +35,7 @@ export default function VideoShowcase() {
         {/* Swiper */}
         <div className="max-w-7xl mx-auto">
           <Swiper
-            modules={[Autoplay]}
+            modules={[Autoplay,Navigation]}
             spaceBetween={16}
             breakpoints={{
               0: { slidesPerView: 1.1 },
@@ -44,7 +44,7 @@ export default function VideoShowcase() {
             }}
             centeredSlides={true}
             loop
-            navigation={true}
+            navigation
             autoplay={{ delay: 30000, disableOnInteraction: false }}
           >
             {videos.map((video) => (
