@@ -44,7 +44,8 @@ export default function VideoShowcase() {
             }}
             centeredSlides={true}
             loop
-            autoplay={{ delay: 40000, disableOnInteraction: false }}
+            navigation={true}
+            autoplay={{ delay: 30000, disableOnInteraction: false }}
           >
             {videos.map((video) => (
               <SwiperSlide key={video.id}>
