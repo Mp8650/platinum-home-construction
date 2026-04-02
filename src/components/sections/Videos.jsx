@@ -1,24 +1,28 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import Container from "@/src/components/ui/Container";
 
 const videos = [
-  { id: 1, ytId: "lBScAguBdCc" },
-  { id: 2, ytId: "odrAKtaisgU" },
-  { id: 3, ytId: "n6s-MEd06w8" },
-  { id: 4, ytId: "xKUeIPq_j4k" },
-  { id: 5, ytId: "zXeCf5mvEEs" },
-  { id: 6, ytId: "7W-E1dxnknE" },
-  { id: 7, ytId: "bIg_FBM2Bpo" },
-  
-  { id: 11, ytId: "1fwFAfS2vis" }
+  { id: 1, ytId: "0WRJBuh1q6Y" },
+  { id: 2, ytId: "bkVYqfefEcc" },
+  { id: 3, ytId: "ZUQ1qLNxxU0" },
+  { id: 4, ytId: "odrAKtaisgU" },
+  { id: 5, ytId: "n6s-MEd06w8" },
+  { id: 6, ytId: "xKUeIPq_j4k" },
+  { id: 7, ytId: "lBScAguBdCc" },
+  { id: 8, ytId: "kSmVidLE9E4" },
+  { id: 9, ytId: "MhraARzaJrE" },
+  { id: 10, ytId: "7W-E1dxnknE" },
+  { id: 11, ytId: "bIg_FBM2Bpo" },
+  { id: 12, ytId: "ZCpOflR1p-4" },
+  { id: 13, ytId: "xGqbHnsoTPM" },
+  { id: 14, ytId: "1fwFAfS2vis" },
 ];
 
 export default function VideoShowcase() {
-  
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-white block lg:hidden">
       <Container>
@@ -35,7 +39,7 @@ export default function VideoShowcase() {
         {/* Swiper */}
         <div className="max-w-7xl mx-auto">
           <Swiper
-            modules={[Autoplay,Navigation,Pagination]}
+            modules={[Autoplay, Navigation, Pagination]}
             spaceBetween={16}
             breakpoints={{
               0: { slidesPerView: 1.1 },
@@ -45,14 +49,14 @@ export default function VideoShowcase() {
             centeredSlides={true}
             loop={true}
             autoplay={{ delay: 30000, disableOnInteraction: false }}
-             navigation={{
+            navigation={{
               prevEl: ".swiper-nav-prev",
               nextEl: ".swiper-nav-next",
             }}
-             pagination={{
+            pagination={{
               clickable: true,
               el: ".swiper-pagination-custom",
-              dynamicBullets: true,
+              //dynamicBullets: true,
             }}
           >
             {videos.map((video) => (
@@ -71,21 +75,19 @@ export default function VideoShowcase() {
                 </div>
               </SwiperSlide>
             ))}
-           </Swiper>
-          <div className="swiper-pagination-custom mt-4 flex justify-center items-center gap-2 text-blue-500"/> 
+          </Swiper>
           <div className="flex items-center justify-center gap-4 mt-4">
-            {/* Previous button */}
-            <button 
+            <button
               className="swiper-nav-prev w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center hover:bg-gray-700 transition"
               aria-label="Previous slide"
             >
               <ChevronLeft size={20} />
             </button>
-            
-            {/* Pagination dots */}
-            <div className="swiper-pagination-custom flex gap-2 items-center"/>
-            {/* Next button */}
-            <button 
+
+            {/* SINGLE pagination container */}
+            <div className="swiper-pagination-custom flex gap-2 items-center" />
+
+            <button
               className="swiper-nav-next w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center hover:bg-gray-700 transition"
               aria-label="Next slide"
             >
