@@ -103,7 +103,7 @@ const capabilities: Capability[] = [
     icon: Award,
     title: "Trusted Expertise",
     description:
-      "Over 6 years delivering high-quality home renovations across the Greater Toronto Area",
+      "Over 8 years delivering high-quality home renovations across the Greater Toronto Area",
   },
   {
     icon: Users,

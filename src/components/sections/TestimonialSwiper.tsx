@@ -53,11 +53,11 @@ export default function TestimonialSwiper() {
           spaceBetween={16}
           slidesPerView={1}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
+          pagination={{ clickable: true , el: ".swiper-pagination-custom", dynamicBullets: true}}
           //navigation
           breakpoints={{
-            480: { slidesPerView: 1.2, spaceBetween: 16 },
-            640: { slidesPerView: 1.5, spaceBetween: 18 },
+            480: { slidesPerView: 1, spaceBetween: 16 },
+            640: { slidesPerView: 1, spaceBetween: 18 },
             768: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 2.5, spaceBetween: 22 },
             1280: { slidesPerView: 3, spaceBetween: 24 },
@@ -95,6 +95,7 @@ export default function TestimonialSwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="swiper-pagination-custom mt-8 flex jusify-center items-center gap-2 text-blue-500"/>
       </div>
     </section>
   );

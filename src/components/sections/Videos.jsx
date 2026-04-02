@@ -1,7 +1,7 @@
 "use client";
-
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation } from "swiper/modules";
+import { Autoplay,Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import Container from "@/src/components/ui/Container";
 
@@ -35,7 +35,7 @@ export default function VideoShowcase() {
         {/* Swiper */}
         <div className="max-w-7xl mx-auto">
           <Swiper
-            modules={[Autoplay,Navigation]}
+            modules={[Autoplay,Navigation,Pagination]}
             spaceBetween={16}
             breakpoints={{
               0: { slidesPerView: 1.1 },
@@ -43,9 +43,17 @@ export default function VideoShowcase() {
               768: { slidesPerView: 2 },
             }}
             centeredSlides={true}
-            loop
-            navigation
+            loop={true}
             autoplay={{ delay: 30000, disableOnInteraction: false }}
+             navigation={{
+              prevEl: ".swiper-nav-prev",
+              nextEl: ".swiper-nav-next",
+            }}
+             pagination={{
+              clickable: true,
+              el: ".swiper-pagination-custom",
+              dynamicBullets: true,
+            }}
           >
             {videos.map((video) => (
               <SwiperSlide key={video.id}>
@@ -63,7 +71,27 @@ export default function VideoShowcase() {
                 </div>
               </SwiperSlide>
             ))}
-          </Swiper>
+           </Swiper>
+          <div className="swiper-pagination-custom mt-4 flex justify-center items-center gap-2 text-blue-500"/> 
+          <div className="flex items-center justify-center gap-4 mt-4">
+            {/* Previous button */}
+            <button 
+              className="swiper-nav-prev w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center hover:bg-gray-700 transition"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            
+            {/* Pagination dots */}
+            <div className="swiper-pagination-custom flex gap-2 items-center"/>
+            {/* Next button */}
+            <button 
+              className="swiper-nav-next w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center hover:bg-gray-700 transition"
+              aria-label="Next slide"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
       </Container>
     </section>

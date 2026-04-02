@@ -148,7 +148,7 @@ export default function ProjectsPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-8 md:p-12 text-center">
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-            Built on Trust. Experts Since 2021
+            Built on Trust. Experts Since 2018
           </h2>
           <p className="text-gray-600 text-sm sm:text-lg leading-relaxed max-w-4xl mx-auto">
             At <span className="font-semibold text-orange-600">
