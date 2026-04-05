@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function TestimonialSwiper() {
   const testimonials = [
@@ -192,12 +192,14 @@ export default function TestimonialSwiper() {
         </div>
 
         <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination]}
+          grabCursor={true}
+          touchRatio={1}
           spaceBetween={16}
           slidesPerView={1}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           pagination={{ clickable: true , el: ".swiper-pagination-custom", dynamicBullets: true}}
-          //navigation
+          
           breakpoints={{
             480: { slidesPerView: 1, spaceBetween: 16 },
             640: { slidesPerView: 1, spaceBetween: 18 },
@@ -238,7 +240,7 @@ export default function TestimonialSwiper() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-pagination-custom mt-8 flex justify-center items-center gap-2"></div>
+        <div className="swiper-pagination-custom mt-8 flex justify-center gap-2"></div>
       </div>
     </section>
   );

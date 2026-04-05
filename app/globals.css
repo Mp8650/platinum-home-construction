@@ -52,3 +52,8 @@ body::-webkit-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
