@@ -85,7 +85,7 @@ export default function VideoShowcase() {
             </button>
 
             {/* SINGLE pagination container */}
-            <div className="swiper-pagination-custom flex gap-2 items-center" />
+            <div className="swiper-pagination-custom flex gap-2 items-center"></div>
 
             <button
               className="swiper-nav-next w-10 h-10 rounded-full bg-gray-500 text-white flex items-center justify-center hover:bg-gray-700 transition"
