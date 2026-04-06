@@ -147,6 +147,8 @@ export default function VideoShowcase() {
             pagination={{
               clickable: true,
               el: paginationEl,
+              dynamicBullets: true,
+              dynamicMainBullets: 5,
             }}
           >
             {videos.map((video) => (
