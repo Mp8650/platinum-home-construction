@@ -22,6 +22,11 @@ const videos = [
   { id: 12, ytId: "ZCpOflR1p-4" },
   { id: 13, ytId: "xGqbHnsoTPM" },
   { id: 14, ytId: "1fwFAfS2vis" },
+  { id: 15, ytId: "easUyQmgw18" },
+  { id: 16, ytId: "aJ7dh4ZFD40" },
+  { id: 17, ytId: "YEdE5oPAMsU" },
+  { id: 18, ytId: "WTz9Fk_WaXM" },
+  { id: 19, ytId: "nc7y8CM2KvU" }
 ];
 
 export default function VideoShowcase() {
