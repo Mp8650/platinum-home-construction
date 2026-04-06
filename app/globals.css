@@ -57,3 +57,19 @@ body::-webkit-scrollbar {
 .swiper-button-next {
   display: none !important;
 }
+
+.video-pagination.swiper-pagination {
+  position: static !important;
+  width: auto !important;
+}
+
+.video-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: #c4c4c4;
+  opacity: 1;
+}
+
+.video-pagination .swiper-pagination-bullet-active {
+  background: #2563eb;
+}

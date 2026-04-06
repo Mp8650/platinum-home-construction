@@ -139,7 +139,7 @@ export default function CTA() {
                   Your message has been sent. We will contact you shortly.
                 </p>
               </div>
-            ) : (<form onSubmit={handleSubmit} className="space-y-6">
+            ) : (<form onSubmit={handleSubmit} className="space-y-6" suppressHydrationWarning>
               {/* Name */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-gray-700">
@@ -148,6 +148,7 @@ export default function CTA() {
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                   <input
+                    suppressHydrationWarning
                     name="name"
                     type="text"
                     placeholder="Enter your name"
@@ -165,6 +166,7 @@ export default function CTA() {
                   <div className="relative">
                     <Phone className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                     <input
+                      suppressHydrationWarning
                       name="phone"
                       type="tel"
                       placeholder="+1 XXXXX XXXXX"
@@ -180,6 +182,7 @@ export default function CTA() {
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                     <input
+                      suppressHydrationWarning
                       name="email"
                       type="email"
                       placeholder="you@email.com"
@@ -197,6 +200,7 @@ export default function CTA() {
                 <div className="relative">
                   <ClipboardList className="absolute left-4 top-4 sm:top-5 h-5 w-5 text-gray-400" />
                   <textarea
+                    suppressHydrationWarning
                     name="message"
                     rows={3}
                     placeholder="Villa, apartment, commercial, renovation, etc."
