@@ -17,7 +17,7 @@ export default function FloatingActions() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/16479900064"
+      href="https://wa.me/16479900064?text=Hello%20Platinum%20Home%20Services,%20I%20am%20interested%20in%20your%20home%20services.%20Could%20you%20please%20provide%20more%20details%20and%20a%20quote?%20Thank%20you!"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-3 bg-green-500 text-white px-4 py-3 rounded-l-xl
