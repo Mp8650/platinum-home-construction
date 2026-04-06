@@ -17,7 +17,8 @@
       "title": "Platinum Home Services | Best Construction Company in Canada",
       "description": "Trusted construction company in Canada offering residential and commercial construction, renovation, and project management services.",
       "url": "https://platinumhomeservices.ca",
-      "type": "website"
+      "type": "website",
+      "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
 
@@ -59,7 +60,8 @@
       "title": "Construction Projects in Canada | Platinum Home Services Portfolio",
       "description": "Explore our portfolio of completed and ongoing construction projects in Canada.",
       "url": "https://platinumhomeservices.ca/projects",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
 
@@ -78,7 +80,8 @@
       "title": "Apply for Construction Projects | Platinum Home Services Canada",
       "description": "Submit your application for construction projects and partnerships with Platinum Home Services.",
       "url": "https://platinumhomeservices.ca/projects/apply",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
 
@@ -99,7 +102,8 @@
       "title": "Construction Expertise in Canada | Platinum Home Services",
       "description": "Explore our construction expertise including building, renovation, and engineering services.",
       "url": "https://platinumhomeservices.ca/expertise",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
   
@@ -119,7 +123,8 @@
       "title": "Contact Platinum Home Services | Construction Company Canada",
       "description": "Get in touch with our team for construction inquiries, quotes, and consultations in Canada.",
       "url": "https://platinumhomeservices.ca/contact",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
 
@@ -139,7 +144,8 @@
       "title": "Careers in Construction | Platinum Home Services Canada",
       "description": "Explore career opportunities and job openings in construction across Canada.",
       "url": "https://platinumhomeservices.ca/careers",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   },
 
@@ -158,7 +164,8 @@
       "title": "Investor Relations | Platinum Home Services Canada",
       "description": "Company updates, financial reports, and investor information for our construction business.",
       "url": "https://platinumhomeservices.ca/investor-relations",
-      "type": "website"
+      "type": "website",
+       "image": "https://platinumhomeservices.ca/previewbanner.png"
     }
   }
 }
