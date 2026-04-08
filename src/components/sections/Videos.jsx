@@ -31,7 +31,6 @@ const videos = [
 
 export default function VideoShowcase() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [paginationEl, setPaginationEl] = useState(null);
   const playerHostRef = useRef(null);
   const playerInstanceRef = useRef(null);
   const pendingVideoIdRef = useRef(null);
@@ -146,9 +145,7 @@ export default function VideoShowcase() {
             allowTouchMove={true}
             pagination={{
               clickable: true,
-              el: paginationEl,
-              dynamicBullets: true,
-              dynamicMainBullets: 5,
+              el: ".video-pagination",
             }}
           >
             {videos.map((video) => (
@@ -182,10 +179,7 @@ export default function VideoShowcase() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div
-            ref={setPaginationEl}
-            className="video-pagination mt-8 flex justify-center"
-          />
+          <div className="video-pagination mt-8 flex justify-center" />
         </div>
 
         <div
