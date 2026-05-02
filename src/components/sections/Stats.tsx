@@ -47,7 +47,7 @@ export default function Stats() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
+          className="font-display text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
         >
           Our Achievements
         </motion.h2>
@@ -98,3 +98,4 @@ export default function Stats() {
     </section>
   );
 }
+

@@ -194,7 +194,7 @@ export default function ExpertisePage() {
               OUR CAPABILITIES
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Expertise in{" "}
             <span className="text-orange-400">Construction Excellence</span>
           </h1>
@@ -216,7 +216,7 @@ export default function ExpertisePage() {
                 className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 text-center"
               >
                 <Icon className="w-10 h-10 text-orange-600 mx-auto mb-3" />
-                <h3 className="font-bold text-gray-900 mb-1">{cap.title}</h3>
+                <h3 className="font-display font-bold text-gray-900 mb-1">{cap.title}</h3>
                 <p className="text-sm text-gray-600">{cap.description}</p>
               </div>
             );
@@ -227,7 +227,7 @@ export default function ExpertisePage() {
       {/* Expertise Areas */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-4xl font-bold text-gray-900 mb-4">
             What We Excel At
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -263,7 +263,7 @@ export default function ExpertisePage() {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-3">
                     {area.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed mb-6">
@@ -290,7 +290,7 @@ export default function ExpertisePage() {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="font-display text-4xl font-bold text-gray-900 mb-4">
               Our Construction Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -339,7 +339,7 @@ export default function ExpertisePage() {
                   <div className="text-5xl font-bold opacity-30 mb-2">
                     {phase.step}
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
+                  <h3 className="font-display text-xl font-bold mb-2">{phase.title}</h3>
                   <p className={`${phase.text} text-sm`}>{phase.description}</p>
                 </div>
                 {idx < 3 && (
@@ -358,7 +358,7 @@ export default function ExpertisePage() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
 
           <div className="relative z-10">
-            <h2 className="text-4xl font-bold mb-12 text-center">
+            <h2 className="font-display text-4xl font-bold mb-12 text-center">
               Why Choose Platinum Home Services
             </h2>
 
@@ -398,7 +398,7 @@ export default function ExpertisePage() {
                 <div key={idx} className="flex gap-4">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <h3 className="font-display font-bold text-lg mb-2">{item.title}</h3>
                     <p className="text-gray-300">{item.desc}</p>
                   </div>
                 </div>
@@ -411,7 +411,7 @@ export default function ExpertisePage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-orange-100 mb-10 max-w-2xl mx-auto">
@@ -435,3 +435,4 @@ export default function ExpertisePage() {
     </div>
   );
 }
+

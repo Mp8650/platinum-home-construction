@@ -65,7 +65,7 @@ export default function ServicesPage() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
+            className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight"
           >
             Trusted Construction & Renovation Services in Canada
           </motion.h1>
@@ -92,7 +92,7 @@ years.
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="text-3xl font-bold text-gray-900 mb-4 text-center"
+          className="font-display text-3xl font-bold text-gray-900 mb-4 text-center"
         >
           Our Construction Services
         </motion.h2>
@@ -145,7 +145,7 @@ years.
               className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition group"
             >
               <service.icon className="w-11 h-11 text-blue-700 mb-5 group-hover:scale-110 transition" />
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              <h3 className="font-display text-xl font-semibold mb-3 text-gray-900">
                 {service.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -164,7 +164,7 @@ years.
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="text-3xl font-bold text-gray-900 mb-12 text-center"
+            className="font-display text-3xl font-bold text-gray-900 mb-12 text-center"
           >
             Why Homeowners Choose Platinum Home Services
           </motion.h2>
@@ -197,7 +197,7 @@ years.
                 className="p-8 rounded-2xl shadow-md bg-gray-50"
               >
                 <item.icon className="w-11 h-11 text-blue-700 mb-4" />
-                <h3 className="font-semibold text-xl mb-3 text-gray-900">
+                <h3 className="font-display font-semibold text-xl mb-3 text-gray-900">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">
@@ -217,7 +217,7 @@ years.
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="text-3xl font-bold mb-4"
+            className="font-display text-3xl font-bold mb-4"
           >
             Ready to Start Your Project?
           </motion.h2>
@@ -237,3 +237,5 @@ years.
     </div>
   );
 }
+
+

@@ -110,7 +110,7 @@ const ServicesSlider = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900">
+          <h2 className="font-display text-3xl  md:text-4xl font-bold text-gray-900">
             Services We Provide
           </h2>
           <p className="text-gray-500 mt-2 tracking-wide">
@@ -152,7 +152,7 @@ const ServicesSlider = () => {
                 </div>
 
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-lg text-gray-900 font-semibold mb-2 min-h-[48px]">
+                  <h3 className="font-display text-lg text-gray-900 font-semibold mb-2 min-h-[48px]">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1">
@@ -172,3 +172,4 @@ const ServicesSlider = () => {
 };
 
 export default ServicesSlider;
+

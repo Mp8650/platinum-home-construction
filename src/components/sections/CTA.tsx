@@ -58,14 +58,14 @@ export default function CTA() {
           viewport={{ once: true }}
           className="mb-10 sm:mb-16"
         >
-          <h2 className="mb-5 text-2xl sm:text-3xl md:text-5xl font-bold bg-gray-900 bg-clip-text text-transparent">
+          <h2 className="font-display mb-5 text-2xl sm:text-3xl md:text-5xl font-bold bg-gray-900 bg-clip-text text-transparent">
             Ready to Start Your Project?
           </h2>
 
           <div className="mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4 rounded-full bg-white px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-gray-700 shadow-sm">
             <Calendar className="h-4 w-4 sm:h-5 sm:w-5 text-emerald-500" />
             Free Quote in 24 Hours
-            <span className="text-gray-300">•</span>
+            <span className="text-gray-300">â€¢</span>
             <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5 text-emerald-500" />
             No Obligation
           </div>
@@ -91,12 +91,12 @@ export default function CTA() {
                 <Phone className="h-7 w-7 sm:h-8 sm:w-8" />
               </div>
 
-              <h4 className="mt-3 text-xl sm:text-2xl font-bold">
+              <h4 className="font-display mt-3 text-xl sm:text-2xl font-bold">
                 Talk to Our Expert
               </h4>
 
               <p className="mb-2 text-sm sm:text-base text-gray-600">
-                Mon – Sat | 9AM – 6PM
+                Mon â€“ Sat | 9AM â€“ 6PM
               </p>
 
               <span className="block text-2xl sm:text-3xl font-black tracking-wide">
@@ -122,17 +122,17 @@ export default function CTA() {
 
           {/* Enquiry Form */}
           <div className="rounded-3xl border border-gray-200 bg-white p-6 sm:p-8 text-left shadow-lg">
-            <h3 className="mb-2 text-xl sm:text-2xl font-bold text-gray-900">
+            <h3 className="font-display mb-2 text-xl sm:text-2xl font-bold text-gray-900">
               Quick Enquiry
             </h3>
             <p className="mb-5 sm:mb-6 text-sm sm:text-base text-gray-600">
-              Share your requirements and we’ll contact you shortly.
+              Share your requirements and weâ€™ll contact you shortly.
             </p>
 
             <div className="space-y-4 sm:space-y-5">
                 {submitted ? (
               <div className="text-center">
-                <h2 className="text-2xl font-bold mb-2">
+                <h2 className="font-display text-2xl font-bold mb-2">
                   Thank You!
                 </h2>
                 <p className="text-gray-600">
@@ -213,7 +213,7 @@ export default function CTA() {
               <button 
               type="submit"
               className="mt-4 w-full rounded-2xl bg-blue-800 py-3 sm:py-4 text-base sm:text-lg font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-blue-500">
-                Get a Free Consultation →
+                Get a Free Consultation â†’
               </button>
               </form>
             )}
@@ -224,3 +224,4 @@ export default function CTA() {
     </section>
   );
 }
+

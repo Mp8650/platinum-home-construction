@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const jobData: Record<string, any> = {
       "Prepare progress reports and communicate with clients",
     ],
     requirements: [
-      "Bachelor’s degree in Engineering or Construction Management",
+      "Bachelorâ€™s degree in Engineering or Construction Management",
       "5+ years experience managing large-scale projects",
       "Strong leadership and stakeholder communication skills",
     ],
@@ -62,7 +62,7 @@ const jobData: Record<string, any> = {
     "Collaborate with architects and project teams",
   ],
   requirements: [
-    "Bachelor’s degree in Civil or Structural Engineering",
+    "Bachelorâ€™s degree in Civil or Structural Engineering",
     "Professional Engineer (P.Eng) preferred",
     "Experience with AutoCAD, ETABS, or SAP2000",
   ],
@@ -77,7 +77,7 @@ export default function JobDetailPage() {
   if (!job) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h2 className="text-3xl font-bold mb-4">Job Not Found</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Job Not Found</h2>
         <p className="text-gray-600 mb-6">
           The position you are looking for does not exist or has been closed.
         </p>
@@ -85,7 +85,7 @@ export default function JobDetailPage() {
           href="/careers"
           className="text-orange-600 font-semibold hover:underline"
         >
-          ← Back to Careers
+          â† Back to Careers
         </Link>
       </div>
     );
@@ -105,7 +105,7 @@ export default function JobDetailPage() {
 
         {/* Header Card */}
         <div className="bg-white rounded-2xl shadow-md p-10 mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="font-display text-4xl font-bold text-gray-900 mb-4">
             {job.title}
           </h1>
 
@@ -133,7 +133,7 @@ export default function JobDetailPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Responsibilities */}
           <div className="bg-white rounded-2xl shadow-sm p-8">
-            <h2 className="text-2xl font-semibold mb-6">
+            <h2 className="font-display text-2xl font-semibold mb-6">
               Key Responsibilities
             </h2>
             <ul className="space-y-4">
@@ -148,7 +148,7 @@ export default function JobDetailPage() {
 
           {/* Requirements */}
           <div className="bg-white rounded-2xl shadow-sm p-8">
-            <h2 className="text-2xl font-semibold mb-6">
+            <h2 className="font-display text-2xl font-semibold mb-6">
               Requirements & Qualifications
             </h2>
             <ul className="space-y-4">
@@ -178,3 +178,4 @@ export default function JobDetailPage() {
     </div>
   );
 }
+

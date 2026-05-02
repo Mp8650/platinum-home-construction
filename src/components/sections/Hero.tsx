@@ -19,7 +19,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-white font-bold mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+            className="font-display text-white font-bold mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
           >
             Commercial & Home Renovations in the GTA
           </motion.h1>
@@ -51,3 +51,4 @@ export default function Hero() {
     </section>
   );
 }
+

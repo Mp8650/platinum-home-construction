@@ -185,7 +185,7 @@ export default function TestimonialSwiper() {
     <section className="pt-10 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900">200+ Happy Homeowners</h2>
+          <h2 className="font-display text-4xl font-bold text-gray-900">200+ Happy Homeowners</h2>
           <p className="text-gray-600 mt-3 text-lg">
             Real renovation stories from families across Ontario
           </p>
@@ -222,7 +222,7 @@ export default function TestimonialSwiper() {
                       .slice(0, 2)}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{item.name}</h3>
+                    <h3 className="font-display font-semibold text-gray-900">{item.name}</h3>
                     <p className="text-sm text-gray-500">{item.city}</p>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export default function TestimonialSwiper() {
                <div className="text-gray-700 leading-7 mb-5 flex-1 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
   {item.text}
 </div>
-<div className="text-lg mb-3">⭐⭐⭐⭐⭐</div>
+<div className="text-lg mb-3">â­â­â­â­â­</div>
                 <div className="space-y-2 text-sm text-gray-600 border-t pt-4 mt-auto">
                   <p><strong>Project:</strong> {item.project}</p>
                 </div>
@@ -245,3 +245,4 @@ export default function TestimonialSwiper() {
     </section>
   );
 }
+

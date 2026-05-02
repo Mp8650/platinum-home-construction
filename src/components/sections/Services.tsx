@@ -150,7 +150,7 @@ export default function Services() {
               />
             </motion.div>
 
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6 transition-transform duration-500 group-hover:translate-x-1">
+            <h3 className="font-display text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6 transition-transform duration-500 group-hover:translate-x-1">
               {service.title}
             </h3>
 
@@ -207,3 +207,4 @@ export default function Services() {
     </section>
   );
 }
+

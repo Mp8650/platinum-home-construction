@@ -122,7 +122,7 @@ export default function VideoShowcase() {
       <Container>
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-gray-900">
             Our Work in Action
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
@@ -211,3 +211,4 @@ export default function VideoShowcase() {
     </section>
   );
 }
+

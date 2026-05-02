@@ -39,7 +39,7 @@ export default function ContactPage() {
       {/* Hero */}
       <div className="bg-gradient-to-br from-orange-600 to-orange-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">
             Contact Platinum Home Services
           </h1>
           <p className="text-lg md:text-xl text-orange-100 max-w-2xl">
@@ -57,7 +57,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <MapPin className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl text-gray-600 font-bold">Office Address</h2>
+                <h2 className="font-display text-xl text-gray-600 font-bold">Office Address</h2>
               </div>
               <p className="text-gray-600">
                 342 MILL STREET, KITCHENER,<br />
@@ -68,7 +68,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <Phone className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl text-gray-600 font-bold">Call Us</h2>
+                <h2 className="font-display text-xl text-gray-600 font-bold">Call Us</h2>
               </div>
               <p className="text-gray-600">+16479900064</p>
               <p className="text-gray-600">Mon - Sat, 9:00 AM - 6:00 PM</p>
@@ -77,7 +77,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
             <div className="bg-white rounded-2xl shadow-md p-8">
               <div className="flex items-center gap-4 mb-4">
                 <Mail className="w-6 h-6 text-orange-600" />
-                <h2 className="text-xl text-gray-600 font-bold">Email</h2>
+                <h2 className="font-display text-xl text-gray-600 font-bold">Email</h2>
               </div>
               <p className="text-gray-600">platinumhomeservices01@gmail.com</p>
               <p className="text-gray-600">Support & General Enquiries</p>
@@ -88,7 +88,7 @@ we would love to hear from you. Get in touch today to schedule a consultation
           <div className="bg-white rounded-2xl shadow-md p-10">
             {submitted ? (
               <div className="text-center">
-                <h2 className="text-2xl font-bold mb-2">
+                <h2 className="font-display text-2xl font-bold mb-2">
                   Thank You!
                 </h2>
                 <p className="text-gray-600">
@@ -165,3 +165,4 @@ we would love to hear from you. Get in touch today to schedule a consultation
     </div>
   );
 }
+

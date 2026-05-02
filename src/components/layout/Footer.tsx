@@ -39,8 +39,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo + About */}
           <div>
-            <h2
-              className="text-2xl font-bold text-white cursor-pointer"
+            <h2 className="font-display text-2xl font-bold text-white cursor-pointer"
               onClick={() => handleNav("/")}
             >
               Platinum Home Services
@@ -85,7 +84,7 @@ export default function Footer() {
           {/* <div className="flex flex-row sm:hidden justify-between">
             {/* Quick Links /}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="font-display text-lg font-semibold text-white mb-4">
                 Quick Links
               </h3>
               <ul className="space-y-2 text-gray-400">
@@ -106,7 +105,7 @@ export default function Footer() {
 
             {/* Services /}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="font-display text-lg font-semibold text-white mb-4">
                 Services
               </h3>
               <ul className="space-y-2 text-gray-400">
@@ -121,7 +120,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="hidden sm:block">
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="font-display text-lg font-semibold text-white mb-4">
                 Quick Links
               </h3>
               <ul className="space-y-2 text-gray-400">
@@ -142,7 +141,7 @@ export default function Footer() {
 
             {/* Services */}
             <div className="hidden sm:block">
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="font-display text-lg font-semibold text-white mb-4">
                 Services
               </h3>
               <ul className="space-y-2 text-gray-400">
@@ -157,7 +156,7 @@ export default function Footer() {
 
           {/* Areas We Serve + Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">
+            <h3 className="font-display text-lg font-semibold text-white mb-4">
               Areas We Serve
             </h3>
 
@@ -166,7 +165,7 @@ export default function Footer() {
               London, Scarborough, Oshawa and many more.
             </p>
 
-            <h3 className="text-lg font-semibold text-white mt-8 mb-4">
+            <h3 className="font-display text-lg font-semibold text-white mt-8 mb-4">
               Contact
             </h3>
 
@@ -184,7 +183,7 @@ export default function Footer() {
             </div>
 
             {/* <div className="hidden sm:block mt-6">
-              <h4 className="text-sm font-semibold text-white mb-2">
+              <h4 className="font-display text-sm font-semibold text-white mb-2">
                 Newsletter
               </h4>
               <div className="flex gap-2">
@@ -204,7 +203,7 @@ export default function Footer() {
 
      <div className="border-t border-gray-800">
   <div className="max-w-7xl mx-auto px-6 py-6 text-center text-gray-500 text-sm">
-    © {new Date().getFullYear()} Construction, All rights reserved | Designed by{" "}
+    Â© {new Date().getFullYear()} Construction, All rights reserved | Designed by{" "}
     <a
       href="https://hexiora.com/"
       target="_blank"
@@ -218,3 +217,4 @@ export default function Footer() {
     </footer>
   );
 }
+

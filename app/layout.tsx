@@ -5,18 +5,23 @@ import MovingTagline from "@/src/components/layout/MovingTagline";
 import Footer from "@/src/components/layout/Footer";
 import FloatingButton from '@/src/components/layout/FlotingButton';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SeoHelper from '../src/components/layout/SeoHelper';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  weight: ["600", "700", "800"],
+  style: ["normal"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${playfairDisplay.variable} antialiased`}
       >
         <SeoHelper/>
         <ScrollToTop/>

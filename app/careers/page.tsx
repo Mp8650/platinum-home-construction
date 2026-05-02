@@ -79,11 +79,11 @@ export default function CareersPage() {
       {/* HERO */}
       <section className="bg-gradient-to-br from-orange-600 to-orange-800 text-white">
         <div className="max-w-7xl mx-auto px-6 py-24 text-center">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="font-display text-5xl font-bold mb-6">
             Careers Built on Trust, Safety & Opportunity
           </h1>
           <p className="text-xl text-orange-100 max-w-3xl mx-auto">
-            We don’t just build projects — we build careers, communities, and
+            We donâ€™t just build projects â€” we build careers, communities, and
             long-term futures.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function CareersPage() {
 
       {/* WHY WORK WITH US */}
       <section className="max-w-7xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl font-bold mb-4">Why Work With Us</h2>
+        <h2 className="font-display text-3xl font-bold mb-4">Why Work With Us</h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Our people are the foundation of everything we build. We invest in
           safety, innovation, and career development at every stage.
@@ -106,7 +106,7 @@ export default function CareersPage() {
               key={index}
               className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition"
             >
-              <h3 className="text-2xl font-semibold mb-3">{path.title}</h3>
+              <h3 className="font-display text-2xl font-semibold mb-3">{path.title}</h3>
               <p className="text-gray-600">{path.description}</p>
             </div>
           ))}
@@ -116,7 +116,7 @@ export default function CareersPage() {
       {/* CULTURE */}
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Culture</h2>
+          <h2 className="font-display text-3xl font-bold mb-6">Our Culture</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             We put safety first, act with integrity, value diversity, and create
             opportunities for people to grow and succeed.
@@ -137,7 +137,7 @@ export default function CareersPage() {
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="font-display text-xl font-semibold mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -150,7 +150,7 @@ export default function CareersPage() {
       {/* OPEN ROLES (PREVIEW) */}
       <section className="bg-white py-20">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="font-display text-3xl font-bold text-center mb-10">
             Explore Opportunities
           </h2>
 
@@ -162,7 +162,7 @@ export default function CareersPage() {
                 className="flex items-center justify-between p-6 border rounded-lg hover:border-orange-400 hover:shadow transition"
               >
                 <div>
-                  <h3 className="text-xl font-semibold">{job.title}</h3>
+                  <h3 className="font-display text-xl font-semibold">{job.title}</h3>
                   <p className="text-gray-600 flex items-center gap-2 mt-1">
                     <MapPin className="w-4 h-4" />
                     {job.location}
@@ -178,11 +178,11 @@ export default function CareersPage() {
       {/* CTA */}
       <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Don’t See the Right Role?
+          <h2 className="font-display text-3xl font-bold mb-4">
+            Donâ€™t See the Right Role?
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            We’re always looking for talented individuals. Submit a general
+            Weâ€™re always looking for talented individuals. Submit a general
             application and grow with us.
           </p>
           <Link
@@ -196,3 +196,4 @@ export default function CareersPage() {
     </div>
   );
 }
+

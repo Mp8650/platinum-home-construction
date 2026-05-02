@@ -228,7 +228,7 @@ export default function ProjectsPage() {
             PORTFOLIO
           </span>
 
-          <h1 className="font-bold leading-tight mb-4 text-2xl sm:text-4xl md:text-5xl">
+          <h1 className="font-display font-bold leading-tight mb-4 text-2xl sm:text-4xl md:text-5xl">
             Our Projects
             <span className="block sm:inline"> & </span>
             <span className="block sm:inline text-orange-400">
@@ -245,14 +245,14 @@ export default function ProjectsPage() {
       {/* ================= TRUST ================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <div className="bg-white rounded-3xl shadow-xl p-5 sm:p-8 md:p-12 text-center">
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Built on Trust. Experts Since 2018
           </h2>
           <p className="text-gray-600 text-sm sm:text-lg leading-relaxed max-w-4xl mx-auto">
             At <span className="font-semibold text-orange-600">
               Platinum Home Services
             </span>, we deliver projects with a focus on safety, quality,
-            and long-term value — doing things right the first time.
+            and long-term value â€” doing things right the first time.
           </p>
         </div>
       </section>
@@ -314,7 +314,7 @@ export default function ProjectsPage() {
                   {project.year}
                 </div>
 
-                <h3 className="text-lg sm:text-2xl font-bold mb-2 text-gray-900">
+                <h3 className="font-display text-lg sm:text-2xl font-bold mb-2 text-gray-900">
                   {project.title}
                 </h3>
 
@@ -354,12 +354,12 @@ export default function ProjectsPage() {
       {/* ================= CTA ================= */}
       <section className="bg-gradient-to-br from-orange-600 to-orange-700 text-white py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-bold mb-4">
             Build With a Team You Can Trust
           </h2>
           <p className="text-sm sm:text-lg text-orange-100 mb-8 max-w-2xl mx-auto">
             From planning to completion, we deliver safe, reliable,
-            and high-quality construction — without compromises.
+            and high-quality construction â€” without compromises.
           </p>
           <button
             onClick={() => handleNav("/contact")}
@@ -372,3 +372,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+

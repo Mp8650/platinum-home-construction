@@ -235,7 +235,7 @@ const allProjects = {
       }
     ],
     team: [
-      { role: "Project Manager", name: "François Dubois" },
+      { role: "Project Manager", name: "FranÃ§ois Dubois" },
       { role: "Lead Architect", name: "Marie Tremblay" },
       { role: "Site Supervisor", name: "Pierre Gagnon" },
       { role: "Interior Designer", name: "Isabella Rossi" }
@@ -270,7 +270,7 @@ const allProjects = {
     challenges: [
       {
         title: "Extreme Cold Climate",
-        solution: "Engineered superior insulation package and cold-weather HVAC systems rated for -40°C Alberta winters while maintaining energy efficiency."
+        solution: "Engineered superior insulation package and cold-weather HVAC systems rated for -40Â°C Alberta winters while maintaining energy efficiency."
       },
       {
         title: "Soil Conditions",
@@ -320,7 +320,7 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
       <div className="bg-orange-600 text-white py-3">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between flex-wrap gap-4">
-            <span className="font-semibold">🎯 Demo Mode - Select a Project:</span>
+            <span className="font-semibold">ðŸŽ¯ Demo Mode - Select a Project:</span>
             <div className="flex flex-wrap gap-2">
               {Object.keys(allProjects).map((id) => (
                 <button
@@ -393,7 +393,7 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
               <div className="inline-block mb-3 px-4 py-1.5 bg-orange-600 rounded-full">
                 <span className="text-white font-bold text-sm">{projectData.status}</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3">
                 {projectData.title}
               </h1>
               <div className="flex items-center gap-2 text-white text-lg">
@@ -454,13 +454,13 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
           <div className="md:col-span-2 space-y-8">
             {/* Overview */}
             <div className="bg-white rounded-2xl p-8 shadow-md">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Project Overview</h2>
+              <h2 className="font-display text-3xl font-bold text-gray-900 mb-4">Project Overview</h2>
               <p className="text-gray-700 leading-relaxed text-lg">{projectData.description}</p>
             </div>
 
             {/* Key Highlights */}
             <div className="bg-white rounded-2xl p-8 shadow-md">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Highlights</h2>
+              <h2 className="font-display text-3xl font-bold text-gray-900 mb-6">Key Highlights</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {projectData.highlights.map((highlight, idx) => (
                   <div key={idx} className="flex items-start gap-3">
@@ -473,11 +473,11 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
 
             {/* Challenges & Solutions */}
             <div className="bg-white rounded-2xl p-8 shadow-md">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Challenges & Solutions</h2>
+              <h2 className="font-display text-3xl font-bold text-gray-900 mb-6">Challenges & Solutions</h2>
               <div className="space-y-6">
                 {projectData.challenges.map((item, idx) => (
                   <div key={idx} className="border-l-4 border-orange-600 pl-6 py-2">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <h3 className="font-display text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-gray-700 leading-relaxed">{item.solution}</p>
                   </div>
                 ))}
@@ -489,7 +489,7 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
           <div className="space-y-6">
             {/* Client Info */}
             <div className="bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl p-6 text-white shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Project Details</h3>
+              <h3 className="font-display text-xl font-bold mb-4">Project Details</h3>
               <div className="space-y-3">
                 <div>
                   <p className="text-orange-100 text-sm mb-1">Client</p>
@@ -510,7 +510,7 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
             <div className="bg-white rounded-2xl p-6 shadow-md">
               <div className="flex items-center gap-2 mb-4">
                 <Users className="w-6 h-6 text-orange-600" />
-                <h3 className="text-xl font-bold text-gray-900">Project Team</h3>
+                <h3 className="font-display text-xl font-bold text-gray-900">Project Team</h3>
               </div>
               <div className="space-y-3">
                 {projectData.team.map((member, idx) => (
@@ -540,7 +540,7 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Inspired by This Project?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -561,3 +561,4 @@ export default function ProjectDetailsPage({ projectId = 1 }) {
     </div>
   );
 }
+

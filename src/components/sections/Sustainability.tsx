@@ -22,7 +22,7 @@ export default function Sustainability() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-6 text-3xl md:text-5xl font-bold bg-gray-900 bg-clip-text text-transparent bg-clip-text text-transparent mb-6">
+            <h2 className="font-display mb-6 text-3xl md:text-5xl font-bold bg-gray-900 bg-clip-text text-transparent bg-clip-text text-transparent mb-6">
               Sustainable Construction
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
@@ -102,3 +102,4 @@ export default function Sustainability() {
     </section>
   );
 }
+

@@ -65,7 +65,7 @@ export default function ApplyPage() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
+          <h1 className="font-display text-4xl font-bold text-gray-900 mb-3">
             Apply for a Position
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl">
@@ -78,7 +78,7 @@ export default function ApplyPage() {
         <div className="bg-white rounded-2xl shadow-md p-10">
           {submitted ? (
             <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-xl text-center">
-              <h2 className="text-2xl font-semibold mb-2">
+              <h2 className="font-display text-2xl font-semibold mb-2">
                 Application Submitted
               </h2>
               <p>
@@ -189,3 +189,4 @@ export default function ApplyPage() {
     </div>
   );
 }
+
