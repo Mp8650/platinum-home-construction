@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   Search,
   MapPin,
-  ArrowRight,
   Calendar,
   Tag,
 } from "lucide-react";
@@ -16,7 +14,7 @@ const projects = [
   {
     id: 1,
     title: "Modern Basement Transformation",
-    location: "Toronto, ON",
+    location: "Brampton, ON",
     category: "Residential",
     year: "2024",
     image: "/images/modern-basement.jpeg",
@@ -38,7 +36,7 @@ const projects = [
   {
     id: 3,
     title: "Luxury Basement Upgrade",
-    location: "Brampton, ON",
+    location: "Caledon, ON",
     category: "Renovation",
     year: "2024",
     image: "/images/luxury-basement.jpeg",
@@ -49,7 +47,7 @@ const projects = [
   {
     id: 4,
     title: "Eco-Friendly Home Renovation",
-    location: "Oakville, ON",
+    location: "Guelph, ON",
     category: "Renovation",
     year: "2023",
     image: "/images/eco-home.jpeg",
@@ -60,7 +58,7 @@ const projects = [
   {
     id: 5,
     title: "Open Concept Living Upgrade",
-    location: "Toronto, ON",
+    location: "Cambridge, ON",
     category: "Residential",
     year: "2023",
     image: "/images/open-concept.jpeg",
@@ -71,7 +69,7 @@ const projects = [
   {
     id: 6,
     title: "Finished Basement Recreation Room",
-    location: "Mississauga, ON",
+    location: "Waterloo, ON",
     category: "Renovation",
     year: "2022",
     image: "/images/recreation-room.jpeg",
@@ -79,10 +77,110 @@ const projects = [
       "Converted basement into a recreation room with stylish flooring, entertainment setup, and smart storage solutions.",
     valueTags: ["Family Friendly", "Modern Finish", "Functional Design"],
   },
+  {
+    id: 7,
+    title: "Medical, Lab & Professional Spaces",
+    location: "London, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-medical-reception.jpeg",
+    description:
+      "Clean, organized, durable finishes for clinics, labs, offices, and professional service environments.",
+    valueTags: ["Clinical Ready", "Durable Finishes", "Professional Layout"],
+  },
+  {
+    id: 8,
+    title: "Clinic Corridor & Reception Upgrade",
+    location: "Scarborough, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-medical-corridor.jpeg",
+    description:
+      "Healthcare-focused corridor and reception improvements designed for clean flow, comfort, and efficient daily operations.",
+    valueTags: ["Patient Flow", "Modern Lighting", "Clean Design"],
+  },
+  {
+    id: 9,
+    title: "Corporate Office Reception Modernization",
+    location: "Oshawa, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-office-reception.jpeg",
+    description:
+      "Contemporary reception renovation with refined finishes, welcoming waiting areas, and durable materials for high-traffic use.",
+    valueTags: ["Brand-Forward Entry", "Durable Materials", "Client-Friendly"],
+  },
+  {
+    id: 10,
+    title: "Open-Plan Office Buildout",
+    location: "Brampton, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-office-open-plan.jpeg",
+    description:
+      "Commercial office fit-out featuring open work zones, private meeting rooms, and glass partitions for collaboration.",
+    valueTags: ["Open Layout", "Team Productivity", "Modern Workspace"],
+  },
+  {
+    id: 11,
+    title: "Boardroom & Collaboration Hub",
+    location: "Mississauga, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-boardroom.jpeg",
+    description:
+      "Boardroom renovation with executive finishes, integrated lighting, and upgraded collaboration-ready meeting space.",
+    valueTags: ["Executive Finish", "Meeting Ready", "Acoustic Comfort"],
+  },
+  {
+    id: 12,
+    title: "Restaurant Dining Renovation",
+    location: "Caledon, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-restaurant-interior.jpeg",
+    description:
+      "Restaurant interior remodel with warm materials, efficient seating flow, and a polished hospitality-focused atmosphere.",
+    valueTags: ["Hospitality Design", "Durable Flooring", "Guest Experience"],
+  },
+  {
+    id: 13,
+    title: "Retail Storefront Fit-Out",
+    location: "Guelph, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-retail-storefront.jpeg",
+    description:
+      "Retail storefront renovation focused on product visibility, customer movement, and a clean premium shopping environment.",
+    valueTags: ["Customer Flow", "Display Ready", "Retail Durability"],
+  },
+  {
+    id: 14,
+    title: "Industrial Facility Interior Upgrade",
+    location: "Waterloo, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-industrial-warehouse.jpeg",
+    description:
+      "Industrial interior renovation for warehouse and utility spaces with safety-focused planning and durable execution.",
+    valueTags: ["Industrial Grade", "Safety First", "Operational Efficiency"],
+  },
+  {
+    id: 15,
+    title: "Commercial Washroom Renovation",
+    location: "London, ON",
+    category: "Commercial",
+    year: "2025",
+    image: "/images/commercial-restroom-finish.jpeg",
+    description:
+      "Commercial washroom upgrade with clean lines, robust fixtures, and low-maintenance finishes for long-term performance.",
+    valueTags: ["Code-Ready", "Hygienic Finish", "Long-Term Durability"],
+  },
 ];
 
 const categories = [
   "All",
+  "Commercial",
   "Residential",
   "Renovation",
 ];
@@ -139,7 +237,7 @@ export default function ProjectsPage() {
           </h1>
 
           <p className="text-sm sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Premium construction solutions delivered across Canada
+            Premium residential and commercial renovation solutions across the GTA
           </p>
         </div>
       </section>

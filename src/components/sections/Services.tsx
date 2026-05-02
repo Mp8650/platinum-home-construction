@@ -20,6 +20,22 @@ import SectionHeading from "@/src/components/ui/SectionHeading";
 
 const services = [
   {
+    title: "Commercial Renovations",
+    desc: "Commercial renovation services for offices, retail units, restaurants, medical spaces, and professional environments with clean, modern, durable finishes.",
+    icon: Building2,
+    iconColor: "text-slate-700",
+    color: "from-slate-500 to-gray-600",
+    category: "COMMERCIAL",
+  },
+  {
+    title: "Medical, Lab & Professional Spaces",
+    desc: "Clean, organized, durable finishes for clinics, labs, offices, and professional service environments.",
+    icon: ShieldCheck,
+    iconColor: "text-cyan-700",
+    color: "from-cyan-500 to-blue-600",
+    category: "HEALTHCARE",
+  },
+  {
     title: "Basement Renovation & Finishing",
     desc: "Basement renovation services turn unfinished basements into beautiful, functional living spaces by handling framing, drywall, flooring, lighting, and complete finishing to enhance comfort and home value.",
     icon: Building2,
@@ -45,7 +61,7 @@ const services = [
   },
   {
     title: "Our Recent Renovation Projects",
-    desc: "Platinum Home Services has completed a variety of basement renovations and interior improvementprojects across the Greater Toronto Area. Each project reflects our commitment to quality workmanship and modern renovation design.",
+    desc: "Platinum Home Services has completed a variety of residential and commercial renovations across the Greater Toronto Area. Each project reflects our commitment to quality workmanship and modern renovation design.",
     icon: Images,
     iconColor: "text-teal-700",
     color: "from-purple-500 to-indigo-500",
@@ -79,7 +95,7 @@ export default function Services() {
     >
       <SectionHeading
         title="What We Build"
-        subtitle="Engineering excellence across Canada's most demanding construction sectors"
+        subtitle="Residential and commercial renovations built for quality, function, and long-term value"
       />
     </motion.div>
   </div>
