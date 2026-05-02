@@ -21,7 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             className="text-white font-bold mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
           >
-            Basement Renovation & Finishing Experts in the GTA
+            Commercial & Home Renovations in the GTA
           </motion.h1>
 
           <motion.p
@@ -30,7 +30,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="text-gray-200 mb-8 text-base sm:text-lg md:text-xl max-w-3xl"
           >
-            Platinum Home Services renovates basements and interiors into modern, functional spaces, enhancing comfort and property value.
+            Platinum Home Services renovates commercial and home interiors into modern, functional spaces built for comfort, style, and value.
           </motion.p>
 
           <motion.button
