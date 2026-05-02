@@ -4,9 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   Mail,
   Phone,
-  MapPin,
   Instagram,
-  Linkedin,
   Youtube,
   Facebook,
 } from "lucide-react";
@@ -157,22 +155,31 @@ export default function Footer() {
               </ul>
             </div>
 
-          {/* Contact & Newsletter */}
+          {/* Areas We Serve + Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Areas We Serve
+            </h3>
+
+            <p className="text-gray-400 leading-relaxed break-words">
+              Brampton, Mississauga, Caledon, Guelph, Cambridge, Waterloo,
+              London, Scarborough, Oshawa and many more.
+            </p>
+
+            <h3 className="text-lg font-semibold text-white mt-8 mb-4">
+              Contact
+            </h3>
 
             <div className="space-y-3 text-gray-400">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-8 h-8" />
-                <span>342 MILL STREET, KITCHENER, ONTARIO,N2M 0A4</span>
-              </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 <span>+16479900064</span>
               </div>
-              <div className="flex items-center gap-2">
-               <Mail className="w-4 h-4 flex-shrink-0 " />
-                <span>platinumhomeservices01@gmail.com</span>
+              <div className="flex items-start gap-2">
+                <Mail className="w-4 h-4 flex-shrink-0 mt-1" />
+                <span className="break-all sm:break-normal">
+                  platinumhomeservices01@gmail.com
+                </span>
               </div>
             </div>
 
